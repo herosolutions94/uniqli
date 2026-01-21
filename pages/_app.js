@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
 import "../styles/custom.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import Layout from "../components/layout";
 

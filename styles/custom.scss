@@ -14,8 +14,8 @@ body {
   position: relative;
   min-height: 100vh;
   background-color: #ffff;
-  color: $b-color;
-  font-size: 1.6rem;
+  color: $black;
+  font-size: 15px;
   font-family: "oRegular";
   margin: 0;
   padding: 0;
@@ -303,6 +303,7 @@ _btn {
       font-size: 1.5rem;
       padding: 0 2.5rem;
       letter-spacing: 0.03rem;
+      @include radius(5px);
       white-space: nowrap;
       text-transform: uppercase;
       outline: none !important;
@@ -311,6 +312,9 @@ _btn {
       &:hover {
         color: $white;
         background: $black;
+      }
+      &.black_btn {
+        background: #000;
       }
       @include trans;
       @include ipad {
@@ -2685,7 +2689,7 @@ header {
   align-items: center;
   .col {
     .site_btn {
-      background: #ddd;
+      background: #d4d4d4;
     }
     a {
       img {

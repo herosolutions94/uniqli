@@ -33,3 +33,245 @@
     }
   }
 }
+
+.sec_grids {
+  .flex {
+    .cols {
+      width: calc(100% / 3);
+      padding: 0px 68px;
+      text-align: center;
+      .inner {
+        .image {
+          width: 50px;
+          margin: 0 auto;
+          margin-bottom: 15px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+.main_heading {
+  h2 {
+    font-family: "cBold";
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+    font-size: 44px;
+    img {
+      width: 110px;
+      margin-top: 9px;
+    }
+  }
+}
+.sec_about {
+  padding-top: 0;
+  .content {
+    max-width: 643px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 15px;
+    .mini_title {
+      p {
+        color: $primary-color;
+        font-size: 18px;
+        font-family: "Bold";
+        margin-bottom: 6px;
+      }
+    }
+    .up_space {
+      margin-bottom: 18px;
+    }
+  }
+}
+.image_grids {
+  padding-top: 0;
+  .flex {
+    .cols {
+      width: calc(100% / 3);
+      padding: 10px;
+      .inner {
+        .image {
+          position: relative;
+          padding-bottom: 141%;
+          overflow: hidden;
+          @include radius(10px);
+          img {
+            @include pos;
+            content: "";
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          &::before {
+            @include pos;
+            content: "";
+            background: linear-gradient(to bottom, transparent, #000);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+          }
+          .content {
+            @include pos($t: null, $r: null);
+            padding: 20px;
+            z-index: 2;
+            h4 {
+              color: $white;
+              font-family: "cMedium";
+              font-size: 30px;
+            }
+            p {
+              color: $white;
+              font-size: 15px;
+              margin-bottom: 15px;
+            }
+            .site_btn {
+              background: transparent;
+              border: 1px solid #fff;
+              @include radius(4px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.work_grids {
+  padding-top: 0;
+  .text {
+    max-width: 803px;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+  .flex {
+    .cols {
+      width: calc(100% / 4);
+      padding: 10px;
+      .inner {
+        .image {
+          width: 50px;
+          margin: 0 auto;
+          margin-bottom: 10px;
+        }
+        .content {
+          text-align: center;
+          h4 {
+            font-family: "Medium";
+            font-size: 18px;
+          }
+          p {
+            font-size: 15px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.sec_cta {
+  .main_heading {
+    text-align: left;
+    margin-bottom: 20px;
+    h2 {
+      justify-content: left;
+    }
+  }
+  .col1 {
+    width: 78%;
+    padding-right: 185px;
+  }
+  .col2 {
+    width: 22%;
+    .btn1 {
+      margin-bottom: 15px;
+    }
+  }
+}
+.measurments {
+  padding-top: 0;
+  .main_heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .headings {
+      max-width: 700px;
+      h2 {
+        justify-content: left;
+      }
+    }
+  }
+  .flex {
+    .cols {
+      width: calc(100% / 3);
+      padding: 10px;
+      .inner {
+        .image {
+          position: relative;
+          padding-bottom: 90%;
+          overflow: hidden;
+          margin-bottom: 20px;
+          @include radius(10px);
+          img {
+            @include pos;
+            content: "";
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        h4 {
+          font-family: "Medium";
+          font-size: 18px;
+        }
+        .title {
+          p {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+.sec_made {
+  padding-top: 0;
+  .main_heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .image {
+    position: relative;
+    padding-bottom: 60%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    @include radius(10px);
+    img {
+      @include pos;
+      content: "";
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 10px;
+    bottom: 33px;
+    border: none;
+    background: #ffffff94;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include radius(100%);
+    &.custom-prev {
+      right: 50px;
+      z-index: 1;
+    }
+  }
+}
