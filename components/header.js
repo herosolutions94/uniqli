@@ -38,10 +38,11 @@ export default function Header() {
       <div className="contain">
         <div className="logo">
           <Link href="/">
-            <img
-              src={scrolled ? "/images/logo-beig.png" : "/images/logo.svg"}
+            {/* <img
+              src={scrolled ? "/images/logo-beig.png" : "/images/logo.png"}
               alt="Logo"
-            />
+            /> */}
+            <img src="/images/logo.png" alt="" />
           </Link>
         </div>
 

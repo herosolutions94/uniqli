@@ -6,6 +6,7 @@ import Works from "./homepage/works";
 import Cta from "@/components/cta";
 import Measurements from "./homepage/measurements";
 import Made from "./homepage/made";
+import Testimonials from "@/components/testimonials";
 
 const Index = () => {
   return (
@@ -15,9 +16,7 @@ const Index = () => {
       <section className="sec_about">
         <div className="contain">
           <div className="main_heading">
-            <h2>
-              About <img src="images/heading.png" alt="" />
-            </h2>
+            <h2>About Uniqli</h2>
           </div>
           <div className="content">
             <div className="mini_title">
@@ -41,6 +40,7 @@ const Index = () => {
       <Works />
       <Measurements />
       <Made />
+      <Testimonials />
       <Cta />
     </>
   );

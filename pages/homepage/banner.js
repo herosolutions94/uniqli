@@ -17,7 +17,7 @@ const Banner = () => {
             </p>
             <ul className="bTn">
               <li>
-                <Link href="" className="site_btn">
+                <Link href="" className="site_btn white_btn">
                   Upload Inspiration
                 </Link>
               </li>

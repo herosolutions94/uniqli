@@ -22,7 +22,7 @@ const Cta = () => {
                 </Link>
               </div>
               <div className="btn2">
-                <Link href="" className="site_btn black_btn">
+                <Link href="" className="site_btn blur_btn">
                   See How It Works
                 </Link>
               </div>

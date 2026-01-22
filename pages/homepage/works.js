@@ -6,10 +6,7 @@ const Works = () => {
       <section className="work_grids">
         <div className="contain">
           <div className="main_heading">
-            <h2>
-              How <img src="images/heading.png" alt="" />
-              Works
-            </h2>
+            <h2>How Uniqli Works</h2>
           </div>
           <div className="text">
             <p>

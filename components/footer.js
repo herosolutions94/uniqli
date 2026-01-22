@@ -19,22 +19,22 @@ const Footer = () => {
                   <ul className="social flex">
                     <li>
                       <Link href="?" style={{ display: "block" }}>
-                        <img src="images/facebook.svg" alt="" />
+                        <img src="images/facebook.png" alt="" />
                       </Link>
                     </li>
                     <li>
                       <Link href="?" style={{ display: "block" }}>
-                        <img src="images/instagram.svg" alt="" />
+                        <img src="images/instagram.png" alt="" />
                       </Link>
                     </li>
                     <li>
                       <Link href="?" style={{ display: "block" }}>
-                        <img src="images/linkedin.svg" alt="" />
+                        <img src="images/linkedin.png" alt="" />
                       </Link>
                     </li>
                     <li>
                       <Link href="?" style={{ display: "block" }}>
-                        <img src="images/twitter.svg" alt="" />
+                        <img src="images/twitter.png" alt="" />
                       </Link>
                     </li>
                   </ul>
@@ -112,7 +112,7 @@ const Footer = () => {
           </div>
           <div className="footer_logo">
             <Link href="">
-              <img src="images/f-logo.svg" alt="" />
+              <img src="images/logo.png" alt="" />
             </Link>
           </div>
           <div className="copyright relative">

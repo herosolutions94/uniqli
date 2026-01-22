@@ -21,7 +21,7 @@ const Measurements = () => {
               </Link>
             </div>
           </div>
-          <div className="flex">
+          {/* <div className="flex">
             <div className="cols">
               <div className="inner">
                 <div className="image">
@@ -76,6 +76,9 @@ const Measurements = () => {
                 </div>
               </div>
             </div>
+          </div> */}
+          <div className="img">
+            <img src="images/m-2.png" alt="" />
           </div>
         </div>
       </section>
