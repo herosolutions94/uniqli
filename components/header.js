@@ -75,9 +75,12 @@ export default function Header() {
 
           <div className="bTn">
             <div className="col">
-              <Link href="" className="site_btn round">
-                <FaSearch /> Search
-              </Link>
+              <div className="search">
+                <button>
+                  <FaSearch />
+                </button>
+                <input type="text" placeholder="search" />
+              </div>
             </div>
             <div className="col">
               <Link href="">
