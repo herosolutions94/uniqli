@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
 
 export default function Header() {
+  const router = useRouter();
+  const isHome = router.pathname === "/";
   const [toggle, setToggle] = useState(false);
   const [userDrop, setUserDrop] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -25,7 +27,13 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={scrolled ? "header scrolled" : "header"}>
+    <header
+      className={`
+    header 
+    ${isHome ? "home-header" : "inner-header"} 
+    ${scrolled ? "scrolled" : ""}
+  `}
+    >
       <div className="top_nav">
         <div className="contain">
           <p>
@@ -38,10 +46,6 @@ export default function Header() {
       <div className="contain">
         <div className="logo">
           <Link href="/">
-            {/* <img
-              src={scrolled ? "/images/logo-beig.png" : "/images/logo.png"}
-              alt="Logo"
-            /> */}
             <img src="/images/logo.png" alt="" />
           </Link>
         </div>

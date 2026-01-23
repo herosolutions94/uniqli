@@ -2439,13 +2439,66 @@ header {
     -webkit-box-shadow: 0px 0rem 3rem rgb(0 0 0 / 5%);
     box-shadow: 0px 0rem 3rem rgb(0 0 0 / 5%);
   }
+  &.home-header {
+    .top_nav {
+      background: $black;
+      p {
+        color: $white;
+      }
+    }
+    .logo {
+      img {
+        filter: unset !important;
+        -webkit-filter: unset !important;
+      }
+    }
+    #nav {
+      ul {
+        li {
+          a {
+            color: $white !important;
+          }
+        }
+      }
+      .bTn {
+        a {
+          img {
+            filter: unset;
+            -webkit-filter: unset;
+          }
+        }
+      }
+    }
+  }
   &.scrolled {
     background: #f5f1e8;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    a {
-      color: $black !important;
-      &:hover {
-        color: $primary-color !important;
+    .logo {
+      a {
+        img {
+          filter: brightness(0) !important;
+          -webkit-filter: brightness(0) !important;
+        }
+      }
+    }
+    #nav {
+      ul {
+        li {
+          a {
+            color: $black !important;
+            &:hover {
+              color: $primary-color !important;
+            }
+          }
+        }
+      }
+      .bTn {
+        a {
+          img {
+            filter: brightness(0);
+            -webkit-filter: brightness(0);
+          }
+        }
       }
     }
     .logo {
@@ -2456,16 +2509,15 @@ header {
         }
       }
     }
-    .bTn {
-      a {
-        img {
-          filter: brightness(0);
-          -webkit-filter: brightness(0);
-        }
+  }
+  .bTn {
+    a {
+      img {
+        filter: brightness(0);
+        -webkit-filter: brightness(0);
       }
     }
   }
-
   &.session_header {
     background-color: $primary-color;
   }
@@ -2687,17 +2739,19 @@ header {
     }
   }
 }
+
 .top_nav {
-  background: $black;
+  background: #d7cfc2;
   text-align: center;
   padding: 4px 0;
   p {
     margin-bottom: 0;
     font-family: "oregular";
-    color: $white;
+    color: $black;
     font-size: 13px;
   }
 }
+
 .bTn {
   display: flex;
   gap: 25px;
@@ -2726,12 +2780,13 @@ header {
     height: 100%;
     > img {
       height: 100%;
-      @include object(contain, left center);
-      // filter: brightness(0) invert(1);
+      @include object(contain, leftcenter);
       @include trans;
       img {
         transition: all 0.3s ease;
       }
+      filter: brightness(0);
+      -webkit-filter: brightness(0);
     }
   }
   header & {
@@ -2903,7 +2958,7 @@ nav {
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;
-        color: $white;
+        color: $black;
         &:hover,
         &.active {
           color: $primary-color !important;
