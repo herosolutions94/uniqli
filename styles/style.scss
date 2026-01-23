@@ -445,10 +445,8 @@ header {
           text-transform: uppercase;
           color: #000;
         }
-        .title {
-          p {
-            color: $primary-color;
-          }
+        p {
+          margin-bottom: 0;
         }
       }
     }
@@ -463,14 +461,44 @@ header {
     margin-bottom: 20px;
   }
   .col1 {
-    width: 40%;
+    width: 35%;
     padding-right: 40px;
     h3 {
       font-family: "cMedium";
     }
+    ul {
+      padding-left: 0;
+      margin-top: 20px;
+      li {
+        list-style: none;
+        &:first-child {
+          margin-bottom: 20px;
+        }
+        .bold {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          margin-bottom: 8px;
+        }
+        h6 {
+          font-family: "oSemiBold";
+          margin-bottom: 0;
+        }
+        img {
+          width: 22px;
+        }
+      }
+    }
   }
   .col2 {
-    width: 60%;
+    width: 65%;
+    p {
+      margin-top: 10px;
+      margin-bottom: 0;
+      small {
+        color: #00000094;
+      }
+    }
     .form {
       h3 {
         font-family: "cMedium";
@@ -478,7 +506,7 @@ header {
       }
       background: #f1eee9;
       border: 1px solid #f0f0f0;
-      padding: 20px;
+      padding: 30px 20px;
       @include radius(10px);
       .txtGrp {
         margin-bottom: 10px;
@@ -493,7 +521,7 @@ header {
 .sec_result {
   .main_heading {
     max-width: 368px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-left: 10px;
     h2 {
       justify-content: left;
@@ -512,7 +540,7 @@ header {
           padding-bottom: 97%;
           overflow: hidden;
           margin-bottom: 20px;
-          @include radius(10px);
+
           img {
             @include pos;
             content: "";
