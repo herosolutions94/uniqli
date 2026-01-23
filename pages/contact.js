@@ -29,14 +29,14 @@ const Contact = () => {
                 <ul>
                   <li>
                     <div className="bold">
-                      <img src="" alt="" />
+                      <img src="images/mail.svg" alt="" />
                       <h6>Email</h6>
                     </div>
                     <Link href="">support@uniqli.com</Link>
                   </li>
                   <li>
                     <div className="bold">
-                      <img src="" alt="" />
+                      <img src="images/clock.svg" alt="" />
                       <h6>Support Hours</h6>
                     </div>
                     <Link href="">

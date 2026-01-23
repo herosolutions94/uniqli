@@ -1,9 +1,36 @@
+header {
+  .search {
+    display: flex;
+    align-items: center;
+    background: #acacac;
+    min-width: 127px;
+    height: 4.4rem;
+    padding: 0 1rem;
+    font-family: oRegular;
+    overflow: hidden;
+    @include radius(100px);
+    input {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: #fff;
+      &::placeholder {
+        color: $white;
+      }
+    }
+    button {
+      background: transparent;
+      border: none;
+      color: #fff;
+    }
+  }
+}
 .banner {
   background-image: url(/images/banner_bg.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+
   &::before {
     @include pos;
     background: #00000054;
@@ -12,7 +39,7 @@
     height: 100%;
   }
   .content {
-    padding-top: 130px;
+    padding-top: 110px;
     max-width: 500px;
     h1 {
       font-family: "cBold";
@@ -69,6 +96,7 @@
 }
 .sec_about {
   padding-top: 0;
+  padding-bottom: 3rem;
   .content {
     max-width: 643px;
     text-align: center;
@@ -97,7 +125,15 @@
     .cols {
       width: calc(100% / 3);
       padding: 10px;
+
       .inner {
+        .site_btn {
+          height: 3.9rem;
+          &:hover {
+            background: $primary-color !important;
+            border: 1px solid $primary-color !important;
+          }
+        }
         .image {
           position: relative;
           padding-bottom: 141%;
@@ -158,7 +194,7 @@
         .image {
           width: 50px;
           margin: 0 auto;
-          margin-bottom: 10px;
+          margin-bottom: 16px;
         }
         .content {
           text-align: center;
@@ -186,6 +222,9 @@
   .col1 {
     width: 78%;
     padding-right: 185px;
+    p {
+      margin-bottom: 0;
+    }
   }
   .col2 {
     width: 22%;
@@ -406,10 +445,8 @@
           text-transform: uppercase;
           color: #000;
         }
-        .title {
-          p {
-            color: $primary-color;
-          }
+        p {
+          margin-bottom: 0;
         }
       }
     }
@@ -424,14 +461,44 @@
     margin-bottom: 20px;
   }
   .col1 {
-    width: 40%;
+    width: 35%;
     padding-right: 40px;
     h3 {
       font-family: "cMedium";
     }
+    ul {
+      padding-left: 0;
+      margin-top: 20px;
+      li {
+        list-style: none;
+        &:first-child {
+          margin-bottom: 20px;
+        }
+        .bold {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          margin-bottom: 8px;
+        }
+        h6 {
+          font-family: "oSemiBold";
+          margin-bottom: 0;
+        }
+        img {
+          width: 22px;
+        }
+      }
+    }
   }
   .col2 {
-    width: 60%;
+    width: 65%;
+    p {
+      margin-top: 10px;
+      margin-bottom: 0;
+      small {
+        color: #00000094;
+      }
+    }
     .form {
       h3 {
         font-family: "cMedium";
@@ -439,7 +506,7 @@
       }
       background: #f1eee9;
       border: 1px solid #f0f0f0;
-      padding: 20px;
+      padding: 30px 20px;
       @include radius(10px);
       .txtGrp {
         margin-bottom: 10px;
@@ -454,7 +521,7 @@
 .sec_result {
   .main_heading {
     max-width: 368px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding-left: 10px;
     h2 {
       justify-content: left;
@@ -473,7 +540,7 @@
           padding-bottom: 97%;
           overflow: hidden;
           margin-bottom: 20px;
-          @include radius(10px);
+
           img {
             @include pos;
             content: "";
