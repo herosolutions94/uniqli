@@ -60,10 +60,10 @@ export default function Header() {
         <nav id="nav" className={toggle ? "active" : ""}>
           <ul>
             <li>
-              <Link href="/compare">About Us</Link>
+              <Link href="/about">About Us</Link>
             </li>
             <li>
-              <Link href="">How It Works</Link>
+              <Link href="/how_work">How It Works</Link>
             </li>
             <li>
               <Link href="">Measurement Guide</Link>
