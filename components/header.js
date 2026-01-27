@@ -66,10 +66,10 @@ export default function Header() {
               <Link href="/how_work">How It Works</Link>
             </li>
             <li>
-              <Link href="">Measurement Guide</Link>
+              <Link href="/measurement_guide">Measurement Guide</Link>
             </li>
             <li>
-              <Link href="">Gallery</Link>
+              <Link href="/gallery">Gallery</Link>
             </li>
           </ul>
 
