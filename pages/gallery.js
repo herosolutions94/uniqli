@@ -1,5 +1,8 @@
 import Cta from "@/components/cta";
 import Link from "next/link";
+import LightGallery from "lightgallery/react";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 import { useState } from "react";
 const Gallery = () => {
   const [active, setActive] = useState("All");
@@ -82,212 +85,322 @@ const Gallery = () => {
             </div>
             {active === "All" && (
               <div className="grid">
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-1.jpg" alt="" />
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  selector="a"
+                >
+                  <div className="cols">
+                    <a href="/images/testi-1.jpg">
+                      <div className="image">
+                        <img src="/images/testi-1.jpg" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-2.png" alt="" />
+                  <div className="cols">
+                    <a href="/images/banner_bg.png">
+                      <div className="image">
+                        <img src="/images/banner_bg.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/r-5.png" alt="" />
+                  <div className="cols">
+                    <a href="/images/testi-6.png">
+                      <div className="image">
+                        <img src="/images/testi-6.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-4.png" alt="" />
+                  <div className="cols">
+                    <a href="/images/testi-2.png">
+                      <div className="image">
+                        <img src="/images/testi-2.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-5.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/r-5.png">
+                      <div className="image">
+                        <img src="/images/r-5.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-6.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-4.png">
+                      <div className="image">
+                        <img src="/images/testi-4.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-7.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-5.png">
+                      <div className="image">
+                        <img src="/images/testi-5.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/banner_bg.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-7.png">
+                      <div className="image">
+                        <img src="/images/testi-7.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-9.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-9.png">
+                      <div className="image">
+                        <img src="/images/testi-9.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-10.png" alt="" />
+                  <div className="cols">
+                    <a href="/images/r-9.png">
+                      <div className="image">
+                        <img src="/images/r-9.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-11.png" alt="" />
+                  <div className="cols">
+                    <a href="/images/testi-11.png">
+                      <div className="image">
+                        <img src="/images/testi-11.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/r-6.png" alt="" />
+                  <div className="cols">
+                    <a href="/images/r-6.png">
+                      <div className="image">
+                        <img src="/images/r-6.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
+                </LightGallery>
               </div>
             )}
 
             {active === "Sketched" && (
               <div className="grid">
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-1.jpg" alt="" />
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  selector="a"
+                >
+                  <div className="cols">
+                    <a href="/images/testi-1.jpg">
+                      <div className="image">
+                        <img src="/images/testi-1.jpg" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-2.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-2.png">
+                      <div className="image">
+                        <img src="/images/testi-2.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/r-5.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/r-5.png">
+                      <div className="image">
+                        <img src="/images/r-5.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-4.png" alt="" />
-                  </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-5.png" alt="" />
-                  </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-6.png" alt="" />
-                  </div>
-                </div>
+                </LightGallery>
               </div>
             )}
 
             {active === "Seen" && (
               <div className="grid">
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-10.png" alt="" />
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  selector="a"
+                >
+                  <div className="cols">
+                    <a href="/images/testi-10.png">
+                      <div className="image">
+                        <img src="/images/testi-10.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-11.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-11.png">
+                      <div className="image">
+                        <img src="/images/testi-11.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/r-6.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/r-6.png">
+                      <div className="image">
+                        <img src="/images/r-6.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
+                </LightGallery>
               </div>
             )}
-
             {active === "AI" && (
               <div className="grid">
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-2.png" alt="" />
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  selector="a"
+                >
+                  <div className="cols">
+                    <a href="/images/testi-2.png">
+                      <div className="image">
+                        <img src="/images/testi-2.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/r-5.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/r-5.png">
+                      <div className="image">
+                        <img src="/images/r-5.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-4.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-4.png">
+                      <div className="image">
+                        <img src="/images/testi-4.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  {" "}
-                  <div className="image">
-                    <img src="images/testi-5.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-5.png">
+                      <div className="image">
+                        <img src="/images/testi-5.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
+                </LightGallery>
               </div>
             )}
 
             {active === "Dresses" && (
               <div className="grid">
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-10.png" alt="" />
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  selector="a"
+                >
+                  <div className="cols">
+                    <a href="/images/testi-10.png">
+                      <div className="image">
+                        <img src="/images/testi-10.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-11.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-11.png">
+                      <div className="image">
+                        <img src="/images/testi-11.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
+                </LightGallery>
               </div>
             )}
 
             {active === "Suits" && (
               <div className="grid">
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-6.png" alt="" />
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  selector="a"
+                >
+                  <div className="cols">
+                    <a href="/images/testi-6.png">
+                      <div className="image">
+                        <img src="/images/testi-6.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-7.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-7.png">
+                      <div className="image">
+                        <img src="/images/testi-7.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/banner_bg.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/banner_bg.png">
+                      <div className="image">
+                        <img src="/images/banner_bg.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-9.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-9.png">
+                      <div className="image">
+                        <img src="/images/testi-9.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
+                </LightGallery>
               </div>
             )}
 
             {active === "Casual" && (
               <div className="grid">
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/banner_bg.png" alt="" />
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  selector="a"
+                >
+                  <div className="cols">
+                    <a href="/images/banner_bg.png">
+                      <div className="image">
+                        <img src="/images/banner_bg.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-9.png" alt="" />
+
+                  <div className="cols">
+                    <a href="/images/testi-9.png">
+                      <div className="image">
+                        <img src="/images/testi-9.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
+                </LightGallery>
               </div>
             )}
 
             {active === "Formal" && (
               <div className="grid">
-                <div className="cols">
-                  <div className="image">
-                    <img src="images/testi-9.png" alt="" />
+                <LightGallery
+                  speed={500}
+                  plugins={[lgThumbnail, lgZoom]}
+                  selector="a"
+                >
+                  <div className="cols">
+                    <a href="/images/testi-9.png">
+                      <div className="image">
+                        <img src="/images/testi-9.png" />
+                      </div>
+                    </a>
                   </div>
-                </div>
+                </LightGallery>
               </div>
             )}
           </div>

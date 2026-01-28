@@ -168,7 +168,7 @@ h6,
   font-family: "Bold";
   line-height: 1.1;
   margin: 0 0 1rem;
-  color: #231f20;
+  color: #000;
   &.heading {
     position: relative;
     margin-bottom: 2.5rem;
@@ -1477,9 +1477,9 @@ input {
     // -o-border-radius:4px;
     @include radius(50px);
     &:checked {
-      background: $color2;
+      background: $primary-color;
       background-clip: content-box;
-      border-color: $color2;
+      border-color: $primary-color;
     }
   }
   &[type="checkbox"] {
@@ -1493,8 +1493,8 @@ input {
       margin: auto;
     }
     &:checked {
-      background: $color;
-      border-color: $color;
+      background: $primary-color;
+      border-color: rgba($primary-color, 0.1);
     }
   }
   &[type="file"].uploadFile {
