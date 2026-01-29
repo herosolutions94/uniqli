@@ -653,6 +653,7 @@ header {
                 border: 1px solid #000;
                 color: $black;
                 @include radius(0);
+                  height: 3.5rem;
               }
             }
             h4 {
