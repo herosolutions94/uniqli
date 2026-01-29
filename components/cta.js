@@ -17,12 +17,12 @@ const Cta = () => {
             </div>
             <div className="col2">
               <div className="btn1">
-                <Link href="" className="site_btn">
+                <Link href="#" className="site_btn">
                   Start Your Custom Order
                 </Link>
               </div>
               <div className="btn2">
-                <Link href="" className="site_btn blur_btn">
+                <Link href="#" className="site_btn blur_btn">
                   See How It Works
                 </Link>
               </div>

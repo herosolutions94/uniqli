@@ -48,19 +48,19 @@ const Footer = () => {
                   <Link href="/"> Home</Link>
                 </li>
                 <li>
-                  <Link href="">How It Works</Link>
+                  <Link href="#">How It Works</Link>
                 </li>
                 <li>
-                  <Link href="">Upload Sketch</Link>
+                  <Link href="#">Upload Sketch</Link>
                 </li>
                 <li>
-                  <Link href="">Upload Photo</Link>
+                  <Link href="#">Upload Photo</Link>
                 </li>
                 <li>
-                  <Link href="">Generate with AI</Link>
+                  <Link href="#">Generate with AI</Link>
                 </li>
                 <li>
-                  <Link href="">Gallery</Link>
+                  <Link href="#">Gallery</Link>
                 </li>
               </ul>
             </div>
@@ -71,7 +71,7 @@ const Footer = () => {
                   <Link href="/"> About Us</Link>
                 </li>
                 <li>
-                  <Link href="">Testimonials</Link>
+                  <Link href="#">Testimonials</Link>
                 </li>
                 <li>
                   <Link href="">Measurement Guide</Link>
