@@ -48,19 +48,19 @@ const Footer = () => {
                   <Link href="/"> Home</Link>
                 </li>
                 <li>
-                  <Link href="#">How It Works</Link>
+                  <Link href="how_work">How It Works</Link>
                 </li>
                 <li>
-                  <Link href="#">Upload Sketch</Link>
+                  <Link href="">Upload Sketch</Link>
                 </li>
                 <li>
-                  <Link href="#">Upload Photo</Link>
+                  <Link href="/upload_image">Upload Photo</Link>
                 </li>
                 <li>
-                  <Link href="#">Generate with AI</Link>
+                  <Link href="/create_ai_step">Generate with AI</Link>
                 </li>
                 <li>
-                  <Link href="#">Gallery</Link>
+                  <Link href="/gallery">Gallery</Link>
                 </li>
               </ul>
             </div>
@@ -68,16 +68,16 @@ const Footer = () => {
               <h4>Company</h4>
               <ul className="fst">
                 <li>
-                  <Link href="/"> About Us</Link>
+                  <Link href="/about"> About Us</Link>
                 </li>
                 <li>
-                  <Link href="#">Testimonials</Link>
+                  <Link href="/testimonials">Testimonials</Link>
                 </li>
                 <li>
-                  <Link href="">Measurement Guide</Link>
+                  <Link href="/measurement_guide">Measurement Guide</Link>
                 </li>
                 <li>
-                  <Link href="">Contact</Link>
+                  <Link href="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -85,16 +85,16 @@ const Footer = () => {
               <h4>Legal</h4>
               <ul className="fst">
                 <li>
-                  <Link href="/">Imprint</Link>
+                  <Link href="/imprint">Imprint</Link>
                 </li>
                 <li>
                   <Link href="">Shipping & Returns</Link>
                 </li>
                 <li>
-                  <Link href="">Privacy Policy</Link>
+                  <Link href="/privacy_policy">Privacy Policy</Link>
                 </li>
                 <li>
-                  <Link href="">Terms & Conditions</Link>
+                  <Link href="/terms">Terms & Conditions</Link>
                 </li>
               </ul>
             </div>

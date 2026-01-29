@@ -167,7 +167,7 @@ h6,
 .h6 {
   font-family: "Bold";
   line-height: 1.1;
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
   color: #000;
   &.heading {
     position: relative;
@@ -2775,7 +2775,8 @@ header {
     }
     a {
       img {
-        width: 25px;
+            width: 28px;
+    display: block;
       }
     }
   }
@@ -2868,9 +2869,9 @@ nav {
   @include flex(center, flex-end);
   height: 8rem;
   width: max-content;
-  @include pos($t: null, $b: null, $r: 1.5rem);
+  @include pos($t: null, $b: null, $r: 29px);
   margin-left: auto;
-  gap: 133px;
+  gap: 121px;
   @include ipad {
     height: 6rem;
   }

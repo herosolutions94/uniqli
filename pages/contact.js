@@ -133,7 +133,7 @@ const Contact = () => {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/m-1.png" alt="" />
+                    <img src="images/c-1.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Custom Crafted</h4>
@@ -148,7 +148,7 @@ const Contact = () => {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/m-2.png" alt="" />
+                    <img src="images/c-2.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Premium Materials</h4>
@@ -163,7 +163,7 @@ const Contact = () => {
               <div className="cols">
                 <div className="inner">
                   <div className="image">
-                    <img src="images/m-3.png" alt="" />
+                    <img src="images/c-3.png" alt="" />
                   </div>
                   <div className="content">
                     <h4>Ethical & Thoughtful</h4>

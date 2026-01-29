@@ -14,7 +14,7 @@ const ImageGrid = () => {
                   <div className="content">
                     <h4>Sketched by You</h4>
                     <p>
-                      Perfect Fit, No Guessing Tailored to your measurements.
+                      to make custom fashion accessible, modern, and beautifully tailored.
                     </p>
                     <div className="cta">
                       <Link href="" className="site_btn">

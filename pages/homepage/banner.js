@@ -14,7 +14,7 @@ const Banner = () => {
               Your Custom Outfit
             </h1>
             <p>
-              Upload your inspiration or describe your idea — we’ll help you
+              Upload your inspiration or describe your idea — <br/>we’ll help you
               turn it into a perfectly tailored design.
             </p>
             <ul className="bTn">
