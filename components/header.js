@@ -77,7 +77,7 @@ export default function Header() {
             <div className="col">
               <div className="search">
                 <button>
-                  <FaSearch />
+                  <img src="/images/search.png"/>
                 </button>
                 <input type="text" placeholder="search" />
               </div>

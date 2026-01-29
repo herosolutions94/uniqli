@@ -1,0 +1,255 @@
+import Link from "next/link";
+import React, { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
+export default function create_ai_step() {
+  const [aiPopup, setAiPopup] = useState(false);
+  const [checkPopup, setCheckPopup] = useState(false);
+  return (
+    <>
+      <main>
+        <section className="upload_image create_ai">
+          <div className="contain">
+            <div className="flex">
+              <div className="col1">
+                <div className="cm_block">
+                  <p>You can update your description to refine the design.</p>
+                  <div className="white_block">
+                    <p>
+                      A long beige dress with minimal embroidery, loose sleeves,
+                      and a modern silhouette.
+                    </p>
+                    <Link href="" onClick={() => setAiPopup(true)}>
+                      <FaArrowRight />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="col2">
+                <div className="grids">
+                  <div className="cols">
+                    <div className="left_side">
+                      <h6>
+                        Colour <span>(Optional)</span>
+                      </h6>
+                      <p>Example: Beige, Black, Ivory, Pastel Pink</p>
+                    </div>
+                    <div className="right">
+                      <ul className="circle">
+                        <li className="black"></li>
+                        <li className="pinl"></li>
+                        <li className="blue"></li>
+                        <li className="green"></li>
+                        <li className="purple"></li>
+                        <li className="orange"></li>
+                        <li className="yellow"></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="cols">
+                    <div className="left_side">
+                      <h6>
+                        Fabric <span>(Optional)</span>
+                      </h6>
+                      <p>Example: Silk, Cotton, Linen, Chiffon</p>
+                    </div>
+                    <div className="right">
+                      <ul className="circle">
+                        <li className="black"></li>
+                        <li className="pinl"></li>
+                        <li className="blue"></li>
+                        <li className="green"></li>
+                        <li className="purple"></li>
+                        <li className="orange"></li>
+                        <li className="yellow"></li>
+                        <li className="orange2"></li>
+                        <li className="orange3"></li>
+                        <li className="orange4"></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="cols">
+                    <div className="left_side">
+                      <h6>
+                        Description of your outfit <span>*</span>
+                      </h6>
+                      <p>
+                        Tell us about your outfit. Style, length, fit, sleeves,
+                        neckline, embroidery, etc.
+                      </p>
+                    </div>
+                    <div className="right">
+                      <textarea className="input"></textarea>
+                    </div>
+                  </div>
+                  <div className="cols">
+                    <div className="left_side">
+                      <h6>
+                        Type <span>* </span>
+                      </h6>
+                      <p>
+                        Choose the clothing type to show the correct measurement
+                        fields.
+                      </p>
+                    </div>
+                    <div className="right">
+                      <div className="types">
+                        <div className="img">
+                          <img src="images/u-1.png" />
+                        </div>
+                        <div className="img">
+                          <img src="images/u-2.png" />
+                        </div>
+                        <div className="img">
+                          <img src="images/u-3.png" />
+                        </div>
+                        <div className="img">
+                          <img src="images/u-4.png" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {aiPopup === true ? (
+          <div className="popup ai_help create_ai" style={{ display: "block" }}>
+            <div class="tableDv">
+              <div class="tableCell">
+                <div class="contain">
+                  <div class="inside">
+                    <div
+                      className="crosBtn"
+                      onClick={() => setAiPopup(false)}
+                    ></div>
+                    <h3>Dimensions</h3>
+                    <p>
+                      Select the type of clothing and enter your measurements so
+                      we can ensure a perfect fit.
+                    </p>
+                    <div className="upload-wrapper">
+                      <div className="step1 flx_form_Step1">
+                        <div className="col-md-3">
+                          <div className="txtGrp">
+                            <label className="parcel_number">
+                              Measurement <span>*</span>
+                            </label>
+                            <p>Every detail matters for a flawless fit.</p>
+                          </div>
+                        </div>
+
+                        <div className="col-md-9">
+                          <div className="flex">
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Chest</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Chest"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Waist</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Waist"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Shoulder Width</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Shoulder Width"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Sleeve Length</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Sleeve Lengthh"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Jacket Length</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Jacket Length"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="Btn">
+                        <button
+                          className="site_btn"
+                          onClick={() => {
+                            setAiPopup(false);
+                            setCheckPopup(true);
+                          }}
+                        >
+                          Submit Price Determination
+                        </button>
+                      </div>
+                      <div className="lpwer">
+                        <p>
+                          <span>Not sure how to measure?</span>Follow our
+                          step-by-step guide or <Link href="">contact us</Link>{" "}
+                          for help.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+        {checkPopup === true ? (
+          <div className="popup check" style={{ display: "block" }}>
+            <div class="tableDv">
+              <div class="tableCell">
+                <div class="contain">
+                  <div class="inside">
+                    <h3>Let us check it.</h3>
+                    <p>
+                      You’ll receive a WhatsApp or email within 24h – then you
+                      can decide if it’s time to make it real.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+      </main>
+    </>
+  );
+}

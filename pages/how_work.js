@@ -13,7 +13,7 @@ const HowWork = () => {
             <div className="inner">
               <h2>How It Works</h2>
               <p>
-                From your idea to a custom-made garment — simple, guided, and
+                From your idea to a custom-made garment — simple, <br/>guided, and
                 personal.
               </p>
             </div>
@@ -25,7 +25,7 @@ const HowWork = () => {
               <p>
                 Uniqli lets you create custom clothing without guesswork. You
                 start with an idea — we guide you through design, fit, and
-                production. No pressure. No obligation before approval.
+                production. <br/>No pressure. No obligation before approval.
               </p>
             </div>
             <div className="flex">

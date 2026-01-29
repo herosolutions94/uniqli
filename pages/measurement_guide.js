@@ -15,7 +15,7 @@ const MeasurementGuide = () => {
             <div className="inner">
               <h2>Measurement Guide</h2>
               <p>
-                Follow these simple steps to take accurate measurements for the
+                Follow these simple steps to take accurate measurements<br/> for the
                 perfect fit.
               </p>
             </div>

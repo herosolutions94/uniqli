@@ -7,11 +7,12 @@
     vertical-align: middle;
     .crosBtn {
       position: absolute;
-      top: 20px;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      right: 20px;
+      top: 12px;
+      right: 12px;
       width: 23px;
       height: 23px;
       padding: 3px;
@@ -34,8 +35,8 @@ header {
     display: flex;
     align-items: center;
     background: #acacac;
-    min-width: 127px;
-    height: 4.4rem;
+    min-width: 143px;
+    height: 3.9rem;
     padding: 0 1rem;
     font-family: oRegular;
     overflow: hidden;
@@ -53,14 +54,23 @@ header {
       background: transparent;
       border: none;
       color: #fff;
+      width: 34px;
+      font-family: "oMedium";
+      font-size: 1.5rem;
+      img {
+        display: block;
+      }
     }
   }
 }
 .banner {
   background-image: url(/images/banner_bg.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 17rem;
+  margin-top: 31px;
+  padding-bottom: 4rem;
 
   &::before {
     @include pos;
@@ -71,22 +81,28 @@ header {
   }
   .content {
     padding-top: 110px;
-    max-width: 500px;
+    max-width: 567px;
+
     h1 {
       font-family: "cBold";
-      font-size: 50px;
+      font-size: 48px;
       color: $white;
+      text-transform: uppercase;
     }
     p {
       margin-top: 16px;
       font-size: 18px;
       color: $white;
+      font-family: "oRegular";
     }
     .bTn {
       padding-left: 0;
       margin-top: 25px;
       li {
         list-style: none;
+        .site_btn {
+          font-family: "oMedium";
+        }
       }
     }
   }
@@ -94,18 +110,21 @@ header {
 
 .sec_grids {
   .flex {
+    max-width: 1020px;
+    margin: 0 auto;
     .cols {
       width: calc(100% / 3);
-      padding: 0px 50px;
+      padding: 0 25px;
       text-align: center;
       .inner {
         .image {
-          width: 50px;
-          margin: 0 auto;
-          margin-bottom: 15px;
+          width: 59px;
+          margin: 0 auto 20px;
+          display: block;
         }
         p {
           font-size: 17px;
+          margin-bottom: 0;
         }
       }
     }
@@ -128,6 +147,11 @@ header {
 .sec_about {
   padding-top: 0;
   padding-bottom: 3rem;
+  .main_heading {
+    h2 {
+      margin-bottom: 25px;
+    }
+  }
   .content {
     max-width: 643px;
     text-align: center;
@@ -192,12 +216,13 @@ header {
             h4 {
               color: $white;
               font-family: "cMedium";
-              font-size: 30px;
+              font-size: 29px;
+              text-transform: uppercase;
             }
             p {
               color: $white;
               font-size: 15px;
-              margin-bottom: 15px;
+              margin-bottom: 20px;
             }
             .site_btn {
               background: transparent;
@@ -213,9 +238,14 @@ header {
 .work_grids {
   padding-top: 0;
   padding-bottom: 0;
+  .main_heading {
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+  }
   .text {
     max-width: 803px;
-    margin: 0 auto 20px;
+    margin: 0 auto 30px;
     text-align: center;
   }
   .flex {
@@ -460,7 +490,7 @@ header {
           position: relative;
           padding-bottom: 90%;
           overflow: hidden;
-          margin-bottom: 20px;
+          margin-bottom: 26px;
           @include radius(5px);
           img {
             @include pos;
@@ -490,6 +520,9 @@ header {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 50px;
+    h2 {
+      text-transform: uppercase;
+    }
   }
   .col1 {
     width: 35%;
@@ -546,6 +579,7 @@ header {
       button {
         margin-top: 20px;
         border: none;
+        margin-bottom: 10px;
       }
     }
   }
@@ -562,7 +596,7 @@ header {
   .flex {
     .col1 {
       width: 20%;
-      padding-right: 5px;
+      padding-right: 10px;
       .inside {
         background: #f1eee9;
         padding: 15px;
@@ -653,7 +687,7 @@ header {
                 border: 1px solid #000;
                 color: $black;
                 @include radius(0);
-                  height: 3.5rem;
+                height: 3.5rem;
               }
             }
             h4 {
@@ -751,6 +785,75 @@ header {
   }
 }
 .ai_help {
+  &.create_ai {
+    .inside {
+      max-width: 1030px;
+      .flx_form_Step1 {
+        display: flex;
+        .flex {
+          position: relative;
+          .txtGrp {
+            position: relative;
+          }
+          .cols {
+            position: relative;
+            width: calc(100% / 5);
+            padding: 10px;
+            label {
+              color: #000;
+              margin-bottom: 4px;
+              font-size: 15px;
+            }
+            .cm {
+              background-color: transparent;
+              border-radius: 0 4px 4px 0;
+              position: absolute;
+              right: 0;
+              top: 28px;
+              height: 42px;
+              display: flex;
+              align-items: center;
+              width: 40px;
+              justify-content: center;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+      .Btn {
+        display: flex;
+        justify-content: center;
+      }
+      .lpwer {
+        margin-top: 30px;
+        text-align: center;
+        span {
+          display: block;
+        }
+        a {
+          color: $primary-color;
+        }
+      }
+      .step1 {
+        margin: 35px 0;
+        .col-md-3 {
+          padding-right: 20px;
+        }
+        .input {
+          background: #f1eee9;
+          padding-right: 35px;
+        }
+        span {
+          color: $primary-color;
+        }
+        p {
+          margin-bottom: 0;
+          color: #6b6b6b;
+          font-size: 14px;
+        }
+      }
+    }
+  }
   .inside {
     max-width: 850px;
     margin: 0 auto;
@@ -768,6 +871,8 @@ header {
     .input {
       color: #000000a6;
       font-size: 13px;
+    }
+    textarea.input {
       height: 11rem;
     }
     .Btn {
@@ -785,7 +890,7 @@ header {
   background-position: top !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  min-height: 370px;
+  min-height: 400px;
 
   display: flex;
   align-items: center;
@@ -799,7 +904,7 @@ header {
     height: 100%;
   }
   .inner {
-    max-width: 420px;
+    max-width: 546px;
     margin: 0 auto;
     text-align: center;
 
@@ -807,6 +912,7 @@ header {
       font-family: "cBold";
       color: $white;
       font-size: 50px;
+      text-transform: uppercase;
     }
     p {
       color: $white;
@@ -868,6 +974,12 @@ header {
   &.tail_sec {
     .col1 {
       padding-right: 50px;
+      p {
+        margin-bottom: 18px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
       ul {
         padding-left: 0;
         margin-top: 15px;
@@ -889,9 +1001,15 @@ header {
       flex-direction: row-reverse;
       .col1 {
         padding-left: 50px;
+        p {
+          margin-bottom: 18px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
         .cta {
           width: fit-content;
-          margin-top: 20px;
+          margin-top: 30px;
         }
       }
       .col2 {
@@ -919,6 +1037,7 @@ header {
             font-family: "oSemiBold";
             font-size: 17px;
             color: $primary-color;
+            margin-bottom: 7px;
           }
         }
       }
@@ -927,10 +1046,13 @@ header {
 }
 .how_work {
   padding-bottom: 0;
+  padding-top: 4rem;
   .text {
-    max-width: 595px;
+    max-width: 640px;
     text-align: center;
-    margin: 0 auto 50px;
+    margin: 0 auto 4rem;
+    font-family: "cMedium";
+    font-size: 19px;
   }
   .flex {
     margin-bottom: 5rem;
@@ -983,10 +1105,13 @@ header {
       padding: 6rem 5rem;
       @include radius(5px);
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       h2 {
         font-family: "cBold";
         font-size: 40px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
       }
       ul {
         padding-left: 0;
@@ -1078,7 +1203,7 @@ header {
 .sec_how {
   padding-top: 0;
   .flex {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -1150,7 +1275,7 @@ header {
   }
   .col2 {
     width: 55%;
-    padding-left: 30px;
+    padding-left: 50px;
     align-self: center;
     .main_heading {
       h2 {
@@ -1255,7 +1380,7 @@ header {
 .gallery {
   .main_heading {
     max-width: 798px;
-    margin-bottom: 30px;
+    margin-bottom: 6rem;
     h2 {
       justify-content: flex-start;
     }
@@ -1299,10 +1424,11 @@ header {
     .lg-react-element {
       display: flex;
       flex-wrap: wrap;
+      margin: 0 -10px;
     }
     .cols {
       width: calc(100% / 3);
-      padding: 5px;
+      padding: 10px;
       cursor: pointer;
       @include trans;
       &:hover {
@@ -1375,6 +1501,7 @@ header {
     position: relative;
     font-size: 25px;
     margin: 14px 0;
+    margin-bottom: 20px;
     &::before {
       @include pos($l: null, $b: null, $t: 17px);
       content: "";
@@ -1385,6 +1512,12 @@ header {
   }
   .col1 {
     width: 70%;
+    .block {
+      margin-bottom: 40px;
+      &:nth-child(3) {
+        margin-bottom: 0;
+      }
+    }
     .form {
       .txtGrp {
         margin-bottom: 10px;
@@ -1392,6 +1525,10 @@ header {
       .input {
         background: #f1eee9;
         border: none;
+        @include radius(2px);
+        &::placeholder {
+          color: #686868;
+        }
       }
       input[type="checkbox"] {
         background: #f1eee9;
@@ -1635,5 +1772,137 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+}
+.upload_image {
+  &.create_ai {
+    .cm_block {
+      text-align: left !important;
+      .white_block {
+        background: $white;
+        padding: 1rem;
+        @include radius(3px);
+        border: 1px solid #dbdbdb;
+        a {
+          width: 30px;
+          height: 30px;
+          @include radius(100%);
+          justify-content: center;
+          align-items: center;
+          background: $primary-color;
+          color: $white;
+          margin-left: auto;
+          svg {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+  .col1 {
+    width: 25%;
+    padding-right: 30px;
+    .cm_block {
+      text-align: center;
+    }
+  }
+  .col2 {
+    width: 75%;
+    padding-left: 20px;
+    .cols {
+      list-style: none;
+      padding-bottom: 25px;
+      display: flex;
+      .left_side {
+        width: 30%;
+        padding-right: 40px;
+      }
+      .right {
+        width: 70%;
+        .circle {
+          padding-left: 0;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          li {
+            list-style: none;
+            width: 30px;
+            height: 30px;
+            @include radius(100%);
+            background: pink;
+            &.purple {
+              background: purple;
+            }
+            &.yellow {
+              background: yellow;
+            }
+            &.green {
+              background: green;
+            }
+            &.blue {
+              background: blue;
+            }
+            &.black {
+              background: $black;
+            }
+            &.orange {
+              background: orange;
+            }
+            &.orange2 {
+              background: orangered;
+            }
+            &.orange3 {
+              background: yellowgreen;
+            }
+          }
+        }
+      }
+      .types {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .img {
+          width: 35px;
+          height: 35px;
+          @include radius(100%);
+          display: block;
+          border: 1px solid #000;
+          padding: 5px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      h6 {
+        font-family: "oRegular";
+        margin-bottom: 5px;
+        span {
+          color: $primary-color;
+        }
+      }
+      p {
+        font-size: 14px;
+        color: #6b6b6b;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.check {
+  .inside {
+    max-width: 600px;
+    background: #fff;
+    @include radius(5px);
+    text-align: center;
+    padding: 5rem 9rem;
+    margin: 0 auto;
+    h3 {
+      font-family: "cMedium";
+      font-size: 30px;
+    }
   }
 }

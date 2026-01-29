@@ -96,7 +96,7 @@ const Checkout = () => {
                             </div>
                           </div>
 
-                          <div className="col-md-12">
+                          <div className="col-md-6">
                             <div className="txtGrp">
                               <label>
                                 Country <span className="asteric">*</span>
@@ -193,7 +193,7 @@ const Checkout = () => {
                             </div>
                           </div>
 
-                          <div className="col-md-12">
+                          <div className="col-md-6">
                             <div className="txtGrp">
                               <label>
                                 Country <span className="asteric">*</span>
