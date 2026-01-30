@@ -96,6 +96,7 @@ const Footer = () => {
                 <li>
                   <Link href="/terms">Terms & Conditions</Link>
                 </li>
+                <li><span>Imprint must be completed before checkout.</span></li>
               </ul>
             </div>
             <div className="col">

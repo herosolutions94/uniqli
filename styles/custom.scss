@@ -2785,8 +2785,8 @@ header {
   position: relative;
   @include flex(center);
   width: 100%;
-  max-width: 15rem;
-  height: 9rem;
+  max-width: 14rem ;
+  height: 8.5rem ;
   > a {
     display: block;
     width: auto;
@@ -2805,8 +2805,8 @@ header {
   }
   header & {
     float: left;
-    max-width: 16rem;
-    height: 8rem;
+    max-width: 14rem;
+    height: 8.5rem;
     @include trans;
     @include ipad {
       // float: none;
@@ -2867,9 +2867,9 @@ header {
 
 nav {
   @include flex(center, flex-end);
-  height: 8rem;
+  height: 8.5rem;
   width: max-content;
-  @include pos($t: null, $b: null, $r: 29px);
+  @include pos($t: null, $b: null, $r: 33px);
   margin-left: auto;
   gap: 121px;
   @include ipad {
@@ -3144,9 +3144,8 @@ footer {
   .contain {
     z-index: 3;
     .footer_logo {
-      width: 45%;
-      margin: 0 auto;
-      margin-bottom: 20px;
+          width: 50%;
+    margin: 30px auto 40px;
       a {
         width: auto;
         max-width: 100%;
@@ -3168,11 +3167,14 @@ footer {
       margin: -1.5rem -4rem;
       .col {
         flex: unset;
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 2rem;
         width: calc(100% / 4);
         &:first-child {
           width: 40%;
         }
+      }
+      span{
+        color:#8C615D;
       }
       h4 {
         position: relative;

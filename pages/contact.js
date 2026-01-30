@@ -39,10 +39,10 @@ const Contact = () => {
                       <img src="images/clock.svg" alt="" />
                       <h6>Support Hours</h6>
                     </div>
-                    <Link href="">
+                    <p>
                       Monday – Friday <br />
                       9:00 – 18:00 (CET)
-                    </Link>
+                    </p>
                   </li>
                 </ul>
               </div>
