@@ -1,38 +1,33 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import { FaSearch } from "react-icons/fa";
 
 export default function Header() {
   const router = useRouter();
   const isHome = router.pathname === "/";
   const [toggle, setToggle] = useState(false);
-  const [userDrop, setUserDrop] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const ToggleAction = () => setToggle(!toggle);
-  const ToggleUserDrop = () => setUserDrop(!userDrop);
+  const closeMenu = () => setToggle(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setToggle(false);
+  }, [router.pathname]);
+
   return (
     <header
-      className={`
-    header 
-    ${isHome ? "home-header" : "inner-header"} 
-    ${scrolled ? "scrolled" : ""}
-  `}
+      className={`header ${isHome ? "home-header" : "inner-header"} ${
+        scrolled ? "scrolled" : ""
+      }`}
     >
       <div className="top_nav">
         <div className="contain">
@@ -45,7 +40,7 @@ export default function Header() {
 
       <div className="contain">
         <div className="logo">
-          <Link href="/">
+          <Link href="/" onClick={closeMenu}>
             <img src="/images/logo.png" alt="" />
           </Link>
         </div>
@@ -60,40 +55,71 @@ export default function Header() {
         <nav id="nav" className={toggle ? "active" : ""}>
           <ul>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/about" onClick={closeMenu}>
+                About Us
+              </Link>
             </li>
             <li>
-              <Link href="/how_work">How It Works</Link>
+              <Link href="/how_work" onClick={closeMenu}>
+                How It Works
+              </Link>
             </li>
             <li>
-              <Link href="/measurement_guide">Measurement Guide</Link>
+              <Link href="/measurement_guide" onClick={closeMenu}>
+                Measurement Guide
+              </Link>
             </li>
             <li>
-              <Link href="/gallery">Gallery</Link>
+              <Link href="/gallery" onClick={closeMenu}>
+                Gallery
+              </Link>
             </li>
           </ul>
 
-          <div className="bTn">
+          <div className="bTn desk">
             <div className="col">
               <div className="search">
                 <button>
-                  <img src="/images/search.png"/>
+                  <img src="/images/search.png" alt="" />
                 </button>
                 <input type="text" placeholder="search" />
               </div>
             </div>
             <div className="col">
-              <Link href="">
+              <Link href="" onClick={closeMenu}>
                 <img src="/images/user.png" alt="" />
               </Link>
             </div>
             <div className="col">
-              <Link href="">
+              <Link href="" onClick={closeMenu}>
                 <img src="/images/box.png" alt="" />
               </Link>
             </div>
           </div>
         </nav>
+
+        <div className="mobile_icon">
+          <div className="bTn">
+            <div className="col">
+              <div className="search">
+                <button>
+                  <img src="/images/search.png" alt="" />
+                </button>
+                <input type="text" placeholder="search" />
+              </div>
+            </div>
+            <div className="col">
+              <Link href="" onClick={closeMenu}>
+                <img src="/images/user.png" alt="" />
+              </Link>
+            </div>
+            <div className="col">
+              <Link href="" onClick={closeMenu}>
+                <img src="/images/box.png" alt="" />
+              </Link>
+            </div>
+          </div>
+        </div>
 
         <div className="clearfix"></div>
       </div>

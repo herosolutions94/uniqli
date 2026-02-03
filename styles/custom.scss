@@ -40,8 +40,11 @@ body {
     > * {
       width: 100%;
     }
-    @include ipad {
-      padding-top: 6rem;
+    @include ipad_sm {
+      padding-top: 9rem;
+    }
+    @include mobile_md{
+      padding-top: 12rem;
     }
   }
   @at-root {
@@ -838,7 +841,7 @@ textarea {
   @include pos($pos: fixed);
   display: none;
   background: #c9c9c9e3;
-  padding: 2rem;
+  padding: 0.4rem;
   backdrop-filter: blur(3px);
   overflow: auto;
   z-index: 101;
@@ -2444,8 +2447,7 @@ header {
   @include trans;
   background: #fff;
   @include ipad_sm {
-    -webkit-box-shadow: 0px 0rem 3rem rgb(0 0 0 / 5%);
-    box-shadow: 0px 0rem 3rem rgb(0 0 0 / 5%);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   }
   &.home-header {
     box-shadow: none;
@@ -2454,6 +2456,16 @@ header {
       background: $black;
       p {
         color: $white;
+      }
+    }
+    .toggle{
+      &::before,&:after,span{
+        background: $white;
+      }
+      &.active{
+        &::before,&:after{
+        background: $primary-color;
+      }
       }
     }
     .logo {
@@ -2489,6 +2501,11 @@ header {
           filter: brightness(0) !important;
           -webkit-filter: brightness(0) !important;
         }
+      }
+    }
+    .toggle{
+      &::before,&:after,span{
+        background: $primary-color;
       }
     }
     #nav {
@@ -2766,9 +2783,13 @@ header {
   display: flex;
   gap: 25px;
   align-items: center;
-  width: 23%;
+  
   .col {
     flex: unset;
+    &:first-child{
+      width: 143px;
+      min-width: 143px;
+    }
 
     .site_btn {
       background: #d4d4d4;
@@ -2803,19 +2824,17 @@ header {
       -webkit-filter: brightness(0);
     }
   }
+  
   header & {
     float: left;
     max-width: 14rem;
     height: 8.5rem;
     @include trans;
-    @include ipad {
-      // float: none;
-      // margin: auto;
-      height: 6rem;
-      max-width: 14rem;
-    }
+   
     @include ipad_sm {
       margin-left: 3rem;
+      height: 6rem;
+      max-width: 11rem;
     }
   }
   .session_header & {
@@ -2869,14 +2888,17 @@ nav {
   @include flex(center, flex-end);
   height: 8.5rem;
   width: max-content;
-  @include pos($t: null, $b: null, $r: 33px);
+  @include pos($t: null, $b: null, $r: 15px);
   margin-left: auto;
-  gap: 121px;
+  gap: 100px;
   @include ipad {
-    height: 6rem;
+    gap: 45px;
   }
   @include ipad_sm {
     margin: 0;
+  }
+  @include ipad_sm{
+    height: 6rem;
   }
   header.logged & {
     margin-right: 0;
@@ -2906,7 +2928,7 @@ nav {
 }
 #nav {
   // position: relative;
-  @include flex($justify: flex-end);
+  @include flex($justify: space-between);
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2934,6 +2956,13 @@ nav {
       top: 0;
       height: 100vh;
       align-content: center;
+      ul{
+        li{
+          a:not(.site_btn){
+            color: $black !important;
+          }
+        }
+      }
     }
   }
   > .nav_neg {
@@ -2942,7 +2971,7 @@ nav {
   > ul {
     @include flex(center, center);
     @include list;
-    margin: 0 -2rem;
+    margin: 0;
     @include ipad_sm {
       width: 100%;
       -ms-flex-flow: wrap;
@@ -2952,6 +2981,9 @@ nav {
     > li {
       position: relative;
       padding: 0 2rem;
+       @include ipad {
+          padding: 0 1.3rem;
+       }
       @include ipad_sm {
         width: 100%;
         padding: 0;
@@ -3146,6 +3178,12 @@ footer {
     .footer_logo {
           width: 50%;
     margin: 30px auto 40px;
+    @include ipad_sm{
+      width: 86%;
+    }
+    @include mobile_md{
+      width: 100%;
+    }
       a {
         width: auto;
         max-width: 100%;
@@ -3164,7 +3202,13 @@ footer {
       display: flex;
       justify-content: space-between;
       flex-flow: nowrap;
-      margin: -1.5rem -4rem;
+      margin: -1.5rem -2rem;
+      @include ipad_sm{
+        flex-flow: wrap;
+      }
+      @include mobile_md{
+        margin: 0;
+      }
       .col {
         flex: unset;
         padding: 1.5rem 2rem;
@@ -3172,6 +3216,20 @@ footer {
         &:first-child {
           width: 40%;
         }
+        @include ipad_sm{
+          width: calc(100%/2);
+          &:first-child{
+            width: 50%;
+          }
+        }
+        @include mobile_md{
+          width: 100%;
+          padding-left: 0;
+          &:first-child{
+            width: 100%;
+          }
+        }
+        
       }
       span{
         color:#8C615D;

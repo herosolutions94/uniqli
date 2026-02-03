@@ -1,7 +1,10 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+
 
 const Checkout = () => {
+  const [paymentMethod, setPaymentMethod] = useState("card");
+
   return (
     <>
       <main>
@@ -222,7 +225,8 @@ const Checkout = () => {
                                 type="radio"
                                 name="paymentMethod"
                                 id="credit-card"
-                                defaultChecked
+                                  checked={paymentMethod === "card"}
+  onChange={() => setPaymentMethod("card")}
                               />
                               <label
                                 htmlFor="credit-card"
@@ -242,48 +246,50 @@ const Checkout = () => {
                           </div>
 
                           {/* Card Details */}
-                          <div className="row margin-it">
-                            <div className="col-md-6">
-                              <div className="txtGrp">
-                                <input
-                                  type="text"
-                                  className="input"
-                                  name="card_number"
-                                  placeholder="Card Number"
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="txtGrp">
-                                <input
-                                  type="text"
-                                  className="input"
-                                  name="card_holder_name"
-                                  placeholder="Card holder name"
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="txtGrp">
-                                <input
-                                  type="text"
-                                  className="input"
-                                  name="expiry"
-                                  placeholder="Expiry Date(mm/dd/yy)"
-                                />
-                              </div>
-                            </div>
-                            <div className="col-md-6">
-                              <div className="txtGrp">
-                                <input
-                                  type="text"
-                                  className="input"
-                                  name="svc"
-                                  placeholder="CVC?"
-                                />
-                              </div>
-                            </div>
-                          </div>
+                         {paymentMethod === "card" && (
+  <div className="row margin-it">
+    <div className="col-md-6">
+      <div className="txtGrp">
+        <input
+          type="text"
+          className="input"
+          placeholder="Card Number"
+        />
+      </div>
+    </div>
+
+    <div className="col-md-6">
+      <div className="txtGrp">
+        <input
+          type="text"
+          className="input"
+          placeholder="Card holder name"
+        />
+      </div>
+    </div>
+
+    <div className="col-md-6">
+      <div className="txtGrp">
+        <input
+          type="text"
+          className="input"
+          placeholder="Expiry Date (MM/YY)"
+        />
+      </div>
+    </div>
+
+    <div className="col-md-6">
+      <div className="txtGrp">
+        <input
+          type="text"
+          className="input"
+          placeholder="CVC"
+        />
+      </div>
+    </div>
+  </div>
+)}
+
                         </div>
                         {/* PayPal Option */}
                         <div className="checkout inner_bulk">
@@ -293,6 +299,8 @@ const Checkout = () => {
                                 type="radio"
                                 name="paymentMethod"
                                 id="paypal"
+                                  checked={paymentMethod === "paypal"}
+  onChange={() => setPaymentMethod("paypal")}
                               />
                               <label htmlFor="paypal">
                                 <div className="head_pay">
@@ -317,6 +325,8 @@ const Checkout = () => {
                                 type="radio"
                                 name="paymentMethod"
                                 id="saved-card"
+                                checked={paymentMethod === "bank"}
+  onChange={() => setPaymentMethod("bank")}
                               />
                               <label htmlFor="saved-card" className="head_card">
                                 <div className="head_pay">

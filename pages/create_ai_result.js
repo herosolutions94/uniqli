@@ -7,7 +7,7 @@ export default function create_ai_result() {
       <main>
         <section className="sec_result">
           <div className="contain">
-            <div className="flex">
+            <div className="flex flex1">
               <div className="col1">
                 <div className="inside">
                  
