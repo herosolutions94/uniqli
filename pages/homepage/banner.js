@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React, { useState } from "react";
-
+import { useRouter } from "next/router";
 const Banner = () => {
   const [imgPopup, setImgPopup] = useState(false);
   const [aiPopup, setAiPopup] = useState(false);
+  const router = useRouter();
   return (
     <>
       <section className="banner">
@@ -92,7 +93,7 @@ const Banner = () => {
                       placeholder="eg. A long beige dress with minimal embroidery, loose sleeves, and a modern silhouette."
                     ></textarea>
                     <div className="Btn">
-                      <button className="site_btn">Generate Designs</button>
+                      <button className="site_btn"   onClick={() => router.push("/result")}>Generate Designs</button>
                     </div>
                   </div>
                 </div>
