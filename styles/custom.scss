@@ -2508,6 +2508,10 @@ header {
         background: $primary-color;
       }
     }
+    .top_nav{
+      width: 0;
+      display: none;
+    }
     #nav {
       ul {
         li {
@@ -2963,6 +2967,9 @@ nav {
           }
         }
       }
+    }
+    &.closing{
+      height: 0;
     }
   }
   > .nav_neg {

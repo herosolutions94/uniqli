@@ -9,7 +9,16 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   const ToggleAction = () => setToggle(!toggle);
-  const closeMenu = () => setToggle(false);
+  const [closing, setClosing] = useState(false);
+const closeMenu = () => {
+  if (toggle) {
+    setClosing(true);              
+    setTimeout(() => {
+      setToggle(false);            
+      setClosing(false);            
+    }, 500); 
+  }
+};
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +61,8 @@ export default function Header() {
           <span></span>
         </div>
 
-        <nav id="nav" className={toggle ? "active" : ""}>
+        <nav id="nav" className={`${toggle ? "active" : ""} ${closing ? "closing" : ""}`}>
+
           <ul>
             <li>
               <Link href="/about" onClick={closeMenu}>

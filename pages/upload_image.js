@@ -424,25 +424,33 @@ export default function upload_image() {
         ) : (
           ""
         )}
-        {checkPopup === true ? (
-          <div className="popup check" style={{ display: "block" }}>
-            <div class="tableDv">
-              <div class="tableCell">
-                <div class="contain">
-                  <div class="inside">
-                    <h3>Let us check it.</h3>
-                    <p>
-                      You’ll receive a WhatsApp or email within 24h – then you
-                      can decide if it’s time to make it real.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+       {checkPopup === true ? (
+  <div
+    className="popup check"
+    style={{ display: "block" }}
+    onClick={() => setCheckPopup(false)} // outside click
+  >
+    <div className="tableDv">
+      <div className="tableCell">
+        <div className="contain">
+          <div
+            className="inside"
+            onClick={(e) => e.stopPropagation()} // inside click safe
+          >
+            <h3>Let us check it.</h3>
+            <p>
+              You’ll receive a WhatsApp or email within 24h – then you
+              can decide if it’s time to make it real.
+            </p>
           </div>
-        ) : (
-          ""
-        )}
+        </div>
+      </div>
+    </div>
+  </div>
+) : (
+  ""
+)}
+
       </main>
     </>
   );
