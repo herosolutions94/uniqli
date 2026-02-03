@@ -15,7 +15,7 @@ export default function upload_image() {
                   <div className="image">
                     <img src="images/lr.png" alt="" />
                     <Link href="" className="edit">
-                      <img src="/images/pencil.png" />
+                      <img src="/images/Pencil.png" />
                     </Link>
                   </div>
                   <p>You can change this image anytime before submitting.</p>
