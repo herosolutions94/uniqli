@@ -39,7 +39,7 @@ const HowWork = () => {
                   <div className="title">
                     <h6>Start with Your Idea</h6>
                     <h2>
-                      Upload or Create <br />
+                      Upload or Create 
                       Your Design
                     </h2>
                     <p>
@@ -66,7 +66,7 @@ const HowWork = () => {
                     <h6>Review Design Suggestions</h6>
                     <h2>
                       Explore Design
-                      <br /> Options
+                       Options
                     </h2>
                     <p>We generate design suggestions based on your input.</p>
                     <p>
@@ -114,7 +114,7 @@ const HowWork = () => {
                   <div className="title">
                     <h6>Get Your Price</h6>
                     <h2>
-                      Receive a <br />
+                      Receive a
                       Personalized Quote
                     </h2>
                     <p>
@@ -142,7 +142,7 @@ const HowWork = () => {
                     <h6>Confirm & Pay</h6>
                     <h2>
                       Approve and Place
-                      <br /> Your Order
+                      Your Order
                     </h2>
                     <p>
                       If you’re happy with the price, you can confirm your order

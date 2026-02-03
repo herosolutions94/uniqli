@@ -1,7 +1,9 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 export default function upload_image() {
+  const [aiPopup, setAiPopup] = useState(false);
+    const [checkPopup, setCheckPopup] = useState(false);
   return (
     <>
       <main>
@@ -22,7 +24,6 @@ export default function upload_image() {
               <div className="col2">
                 <form className="outfit-form">
                   <div className="grids">
-                   
                     <div className="cols">
                       <div className="left_side">
                         <h6>
@@ -81,7 +82,7 @@ export default function upload_image() {
                               className="green"
                             ></label>
                           </li>
-                           <li>
+                          <li>
                             <input
                               type="radio"
                               id="color-mint"
@@ -93,7 +94,7 @@ export default function upload_image() {
                               className="mint"
                             ></label>
                           </li>
-                           <li>
+                          <li>
                             <input
                               type="radio"
                               id="color-yellow"
@@ -105,7 +106,7 @@ export default function upload_image() {
                               className="yellow"
                             ></label>
                           </li>
-                           <li>
+                          <li>
                             <input
                               type="radio"
                               id="color-mustard"
@@ -117,7 +118,7 @@ export default function upload_image() {
                               className="mustard"
                             ></label>
                           </li>
-                           <li>
+                          <li>
                             <input
                               type="radio"
                               id="color-orange"
@@ -133,7 +134,6 @@ export default function upload_image() {
                       </div>
                     </div>
 
-                   
                     <div className="cols">
                       <div className="left_side">
                         <h6>
@@ -192,7 +192,7 @@ export default function upload_image() {
                               className="chiffon"
                             ></label>
                           </li>
-                           <li>
+                          <li>
                             <input
                               type="radio"
                               id="black1-chiffon"
@@ -204,7 +204,7 @@ export default function upload_image() {
                               className="black1"
                             ></label>
                           </li>
-                           <li>
+                          <li>
                             <input
                               type="radio"
                               id="black2-chiffon"
@@ -216,7 +216,7 @@ export default function upload_image() {
                               className="black2"
                             ></label>
                           </li>
-                           <li>
+                          <li>
                             <input
                               type="radio"
                               id="black3-chiffon"
@@ -232,7 +232,6 @@ export default function upload_image() {
                       </div>
                     </div>
 
-                  
                     <div className="cols">
                       <div className="left_side">
                         <h6>
@@ -253,7 +252,6 @@ export default function upload_image() {
                       </div>
                     </div>
 
-                 
                     <div className="cols">
                       <div className="left_side">
                         <h6>
@@ -273,6 +271,7 @@ export default function upload_image() {
                               name="type"
                               value="dress"
                               required
+                              onChange={() => setAiPopup(true)}
                             />
                             <span>
                               <img src="/images/u-1.png" />
@@ -280,21 +279,21 @@ export default function upload_image() {
                           </label>
 
                           <label className="type-item">
-                            <input type="radio" name="type" value="gown" />
+                            <input type="radio" name="type" value="gown" onChange={() => setAiPopup(true)}/>
                             <span>
                               <img src="/images/u-2.png" />
                             </span>
                           </label>
 
                           <label className="type-item">
-                            <input type="radio" name="type" value="lehenga" />
+                            <input type="radio" name="type" value="lehenga" onChange={() => setAiPopup(true)}/>
                             <span>
                               <img src="/images/u-3.png" />
                             </span>
                           </label>
 
                           <label className="type-item">
-                            <input type="radio" name="type" value="saree" />
+                            <input type="radio" name="type" value="saree" onChange={() => setAiPopup(true)}/>
                             <span>
                               <img src="/images/u-4.png" />
                             </span>
@@ -308,6 +307,142 @@ export default function upload_image() {
             </div>
           </div>
         </section>
+          {aiPopup === true ? (
+          <div className="popup ai_help create_ai" style={{ display: "block" }}>
+            <div class="tableDv">
+              <div class="tableCell">
+                <div class="contain">
+                  <div class="inside">
+                    <div
+                      className="crosBtn"
+                      onClick={() => setAiPopup(false)}
+                    ></div>
+                    <h3>Dimensions</h3>
+                    <p>
+                      Select the type of clothing and enter your measurements so
+                      we can ensure a perfect fit.
+                    </p>
+                    <div className="upload-wrapper">
+                      <div className="step1 flx_form_Step1">
+                        <div className="col-md-3">
+                          <div className="txtGrp">
+                            <label className="parcel_number">
+                              Measurement <span>*</span>
+                            </label>
+                            <p>Every detail matters for a flawless fit.</p>
+                          </div>
+                        </div>
+
+                        <div className="col-md-9">
+                          <div className="flex">
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Chest</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Chest"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Waist</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Waist"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Shoulder Width</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Shoulder Width"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Sleeve Length</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Sleeve Lengthh"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+
+                            <div className="cols">
+                              <div className="txtGrp">
+                                <label>Jacket Length</label>
+                                <input
+                                  type="text"
+                                  className="input"
+                                  name="Jacket Length"
+                                />
+                                <span className="cm">cm</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="Btn">
+                        <button
+                          className="site_btn"
+                          onClick={() => {
+                            setAiPopup(false);
+                            setCheckPopup(true);
+                          }}
+                        >
+                          Submit Price Determination
+                        </button>
+                      </div>
+                      <div className="lpwer">
+                        <p>
+                          <span>Not sure how to measure?</span>Follow our
+                          step-by-step guide or <Link href="">contact us</Link>{" "}
+                          for help.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+        {checkPopup === true ? (
+          <div className="popup check" style={{ display: "block" }}>
+            <div class="tableDv">
+              <div class="tableCell">
+                <div class="contain">
+                  <div class="inside">
+                    <h3>Let us check it.</h3>
+                    <p>
+                      You’ll receive a WhatsApp or email within 24h – then you
+                      can decide if it’s time to make it real.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
       </main>
     </>
   );

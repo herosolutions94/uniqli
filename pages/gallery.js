@@ -33,7 +33,8 @@ const Gallery = () => {
                 </p>
               </div>
             </div>
-            <div className="tabs">
+            <div className="buttons">
+              <div className="tabs">
               <button
                 onClick={() => setActive("All")}
                 className={active === "All" ? "tab active" : "tab"}
@@ -82,6 +83,7 @@ const Gallery = () => {
               >
                 Formal
               </button>
+            </div>
             </div>
             {active === "All" && (
               <div className="grid">
@@ -405,7 +407,7 @@ const Gallery = () => {
             )}
           </div>
         </section>
-        <section className="sec_enter">
+        <section className="sec_enter sec_last">
           <div className="contain">
             <div className="flex">
               <div className="col1">

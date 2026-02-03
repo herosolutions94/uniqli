@@ -18,7 +18,7 @@ export default function create_ai_step() {
                       A long beige dress with minimal embroidery, loose sleeves,
                       and a modern silhouette.
                     </p>
-                    <Link href="" onClick={() => setAiPopup(true)}>
+                    <Link href="" >
                       <FaArrowRight />
                     </Link>
                   </div>
@@ -274,6 +274,7 @@ export default function create_ai_step() {
                               name="type"
                               value="dress"
                               required
+                              onChange={() => setAiPopup(true)}
                             />
                             <span>
                               <img src="/images/u-1.png" />
@@ -281,21 +282,21 @@ export default function create_ai_step() {
                           </label>
 
                           <label className="type-item">
-                            <input type="radio" name="type" value="gown" />
+                            <input type="radio" name="type" value="gown" onChange={() => setAiPopup(true)} />
                             <span>
                               <img src="/images/u-2.png" />
                             </span>
                           </label>
 
                           <label className="type-item">
-                            <input type="radio" name="type" value="lehenga" />
+                            <input type="radio" name="type" value="lehenga"onChange={() => setAiPopup(true)} />
                             <span>
                               <img src="/images/u-3.png" />
                             </span>
                           </label>
 
                           <label className="type-item">
-                            <input type="radio" name="type" value="saree" />
+                            <input type="radio" name="type" value="saree" onChange={() => setAiPopup(true)}/>
                             <span>
                               <img src="/images/u-4.png" />
                             </span>
