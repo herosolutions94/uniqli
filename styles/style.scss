@@ -1890,6 +1890,9 @@ padding-bottom: 90%;
     @include mobile_md{
       width: 200%;
     }
+    @include mobile_xs{
+      width: 230%;
+    }
     .tab {
       background: no-repeat;
       border: none;
