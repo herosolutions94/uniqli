@@ -10,35 +10,49 @@ export default function Header() {
 
   const ToggleAction = () => setToggle(!toggle);
   const [closing, setClosing] = useState(false);
-const closeMenu = () => {
-  if (toggle) {
-    setClosing(true);              
-    setTimeout(() => {
-      setToggle(false);            
-      setClosing(false);            
-    }, 500); 
-  }
-};
+  const closeMenu = () => {
+    if (toggle) {
+      setClosing(true);
+      setTimeout(() => {
+        setToggle(false);
+        setClosing(false);
+      }, 500);
+    }
+  };
 
   useEffect(() => {
+    if (toggle) {
+      const scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+    } else {
+      const scrollY = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+    }
+  }, [toggle]);
+  useEffect(() => {
     const handleScroll = () => {
+      if (toggle) return;
       setScrolled(window.scrollY > 50);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+  }, [toggle]);
   useEffect(() => {
     setToggle(false);
   }, [router.pathname]);
-
   return (
     <header
       className={`header ${isHome ? "home-header" : "inner-header"} ${
         scrolled ? "scrolled" : ""
       }`}
     >
-      <div className="top_nav">
+      <div className={`top_nav ${scrolled ? "hide" : ""}`}>
         <div className="contain">
           <p>
             Free shipping on orders over $50 • Easy returns within 7 days •
@@ -61,8 +75,10 @@ const closeMenu = () => {
           <span></span>
         </div>
 
-        <nav id="nav" className={`${toggle ? "active" : ""} ${closing ? "closing" : ""}`}>
-
+        <nav
+          id="nav"
+          className={`${toggle ? "active" : ""} ${closing ? "closing" : ""}`}
+        >
           <ul>
             <li>
               <Link href="/about" onClick={closeMenu}>
