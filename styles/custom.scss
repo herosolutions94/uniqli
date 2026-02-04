@@ -2508,10 +2508,7 @@ header {
         background: $primary-color;
       }
     }
-    .top_nav{
-      width: 0;
-      display: none;
-    }
+
     #nav {
       ul {
         li {
@@ -2775,12 +2772,27 @@ header {
   background: #d7cfc2;
   text-align: center;
   padding: 4px 0;
+  opacity: 1;
+  transform: translateY(0);
+  
+transition: opacity 0.35s ease, transform 0.35s ease;
   p {
     margin-bottom: 0;
     font-family: "oregular";
     color: $black;
     font-size: 13px;
   }
+   &.hide {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+  max-height: 0;
+  padding: 0;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+}
 }
 
 .bTn {
