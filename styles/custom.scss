@@ -2772,28 +2772,28 @@ header {
   background: #d7cfc2;
   text-align: center;
   padding: 4px 0;
+  transition: all 0.3s ease;
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.1s ease, transform 0.3s ease;
-  p
-{
+  margin-top: 0;
+  pointer-events: auto;
+
+  p {
     margin-bottom: 0;
     font-family: "oregular";
     color: $black;
     font-size: 13px;
   }
-   &.hide {
-  opacity: 0;
-  transform: translateY(-100%);
-  pointer-events: none;
-  max-height: 0;
-  padding: 0;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+    margin-top: -32px; 
+    @include mobile_sm{
+          margin-top: -57px;
+    }
+  }
 }
-}
+
 
 .bTn {
   display: flex;
