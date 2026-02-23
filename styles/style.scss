@@ -207,7 +207,7 @@ header {
 
 .sec_grids {
   .flex {
-    max-width: 1020px;
+    // max-width: 1020px;
     margin: 0 auto;
     .cols {
       width: calc(100% / 3);
@@ -332,7 +332,7 @@ object-fit: contain;
             z-index: 1;
           }
           .content {
-            @include pos($t: null, $r: null);
+            @include pos($t: null);
             padding: 20px;
             z-index: 2;
             h4 {
@@ -582,7 +582,7 @@ object-fit: contain;
     max-width: 780px;
     text-align: center;
         padding: 4rem 13rem;
-    background: rgba(215, 207, 194, 0.33);
+    // background: rgba(215, 207, 194, 0.33);
     margin: 0 auto;
     @include radius(5px);
     border: 1px solid #dedede;
@@ -1951,7 +1951,7 @@ padding-bottom: 90%;
       }
       .image {
         position: relative;
-        padding-bottom: 100%;
+        padding-bottom: 130%;
         overflow: hidden;
         @include radius(5px);
         @include trans;
@@ -1972,6 +1972,15 @@ padding-bottom: 90%;
           height: 100%;
           object-fit: cover;
           object-position: top;
+        }
+        span{
+          @include pos($r:null, $b:null, $t:2rem, $l:2rem);
+          background-color: #fff;
+          padding: .4rem 1rem;
+          @include radius(4px);
+          color: #333;
+          font-size: 1.4rem;
+          font-family: 'Bold';
         }
       }
     }

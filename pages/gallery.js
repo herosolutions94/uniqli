@@ -5,7 +5,7 @@ import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import { useState } from "react";
 const Gallery = () => {
-  const [active, setActive] = useState("All");
+  const [active, setActive] = useState("Sketched");
   return (
     <>
       <main>
@@ -35,12 +35,12 @@ const Gallery = () => {
             </div>
             <div className="buttons">
               <div className="tabs">
-              <button
+              {/* <button
                 onClick={() => setActive("All")}
                 className={active === "All" ? "tab active" : "tab"}
               >
                 All
-              </button>
+              </button> */}
               <button
                 onClick={() => setActive("Sketched")}
                 className={active === "Sketched" ? "tab active" : "tab"}
@@ -59,7 +59,7 @@ const Gallery = () => {
               >
                 Dream with AI
               </button>
-              <button
+              {/* <button
                 onClick={() => setActive("Dresses")}
                 className={active === "Dresses" ? "tab active" : "tab"}
               >
@@ -82,10 +82,10 @@ const Gallery = () => {
                 className={active === "Formal" ? "tab active" : "tab"}
               >
                 Formal
-              </button>
+              </button> */}
             </div>
             </div>
-            {active === "All" && (
+            {/* {active === "All" && (
               <div className="grid">
                 <LightGallery
                   speed={500}
@@ -183,7 +183,7 @@ const Gallery = () => {
                   </div>
                 </LightGallery>
               </div>
-            )}
+            )} */}
 
             {active === "Sketched" && (
               <div className="grid">
@@ -196,6 +196,7 @@ const Gallery = () => {
                     <a href="/images/testi-1.jpg">
                       <div className="image">
                         <img src="/images/testi-1.jpg" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -204,6 +205,7 @@ const Gallery = () => {
                     <a href="/images/testi-2.png">
                       <div className="image">
                         <img src="/images/testi-2.png" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -212,6 +214,7 @@ const Gallery = () => {
                     <a href="/images/r-5.png">
                       <div className="image">
                         <img src="/images/r-5.png" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -230,6 +233,7 @@ const Gallery = () => {
                     <a href="/images/testi-10.png">
                       <div className="image">
                         <img src="/images/testi-10.png" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -238,6 +242,7 @@ const Gallery = () => {
                     <a href="/images/testi-11.png">
                       <div className="image">
                         <img src="/images/testi-11.png" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -246,6 +251,7 @@ const Gallery = () => {
                     <a href="/images/r-6.png">
                       <div className="image">
                         <img src="/images/r-6.png" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -263,6 +269,7 @@ const Gallery = () => {
                     <a href="/images/testi-2.png">
                       <div className="image">
                         <img src="/images/testi-2.png" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -271,6 +278,7 @@ const Gallery = () => {
                     <a href="/images/r-5.png">
                       <div className="image">
                         <img src="/images/r-5.png" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -279,6 +287,7 @@ const Gallery = () => {
                     <a href="/images/testi-4.png">
                       <div className="image">
                         <img src="/images/testi-4.png" />
+                        <span>Most Loved</span>
                       </div>
                     </a>
                   </div>
@@ -294,7 +303,7 @@ const Gallery = () => {
               </div>
             )}
 
-            {active === "Dresses" && (
+            {/* {active === "Dresses" && (
               <div className="grid">
                 <LightGallery
                   speed={500}
@@ -318,9 +327,9 @@ const Gallery = () => {
                   </div>
                 </LightGallery>
               </div>
-            )}
+            )} */}
 
-            {active === "Suits" && (
+            {/* {active === "Suits" && (
               <div className="grid">
                 <LightGallery
                   speed={500}
@@ -404,7 +413,7 @@ const Gallery = () => {
                   </div>
                 </LightGallery>
               </div>
-            )}
+            )} */}
           </div>
         </section>
         <section className="sec_enter sec_last">
