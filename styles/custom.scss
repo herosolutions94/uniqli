@@ -712,6 +712,9 @@ textarea {
     content: "";
     display: table;
   }
+  @include lcd{
+    max-width: 1750px;
+  }
   &:after,
   &:after {
     clear: both;
