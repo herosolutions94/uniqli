@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
   background-color: #ffff;
   color: $black;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "oRegular";
   margin: 0;
   padding: 0;
@@ -105,7 +105,7 @@ body {
 h1,
 .h1,
 .size_1 {
-  font-size: 4.2rem;
+  font-size: 4rem;
   @include ipad_sm {
     font-size: 4rem;
   }
@@ -117,7 +117,7 @@ h1,
 h2,
 .h2,
 .size_2 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   @include mobile {
     font-size: 3rem;
   }
@@ -126,7 +126,7 @@ h2,
 h3,
 .h3,
 .size_3 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   @include mobile {
     font-size: 2.2rem;
   }
@@ -303,7 +303,7 @@ _btn {
       color: $white;
       font-family: "oRegular";
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       padding: 0 2.5rem;
       letter-spacing: 0.03rem;
       @include radius(5px);
@@ -2906,10 +2906,10 @@ header {
 nav {
   @include flex(center, flex-end);
   height: 8.5rem;
-  width: max-content;
-  @include pos($t: null, $b: null, $r: 15px);
+  // width: max-content;
+  @include pos($t: null, $b: null, $r: 15px, $l:20%);
   margin-left: auto;
-  gap: 100px;
+  // gap: 100px;
   @include ipad {
     gap: 45px;
   }
@@ -2991,7 +2991,7 @@ nav {
     margin-left: -10rem;
   }
   > ul {
-    @include flex(center, center);
+    @include flex(center, flex-start);
     @include list;
     margin: 0;
     @include ipad_sm {
@@ -3022,7 +3022,7 @@ nav {
         height: 4rem;
         font-family: "oMedium";
         color: $black;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;
