@@ -247,7 +247,7 @@ object-fit: contain;
     align-items: center;
     gap: 7px;
     justify-content: center;
-    font-size: 42px;
+    // font-size: 40px;
      @include mobile_md{
       font-size: 35px;
      }
@@ -400,7 +400,7 @@ object-fit: contain;
             font-size: 18px;
           }
           p {
-            font-size: 15px;
+            // font-size: 15px;
             margin-bottom: 0;
           }
         }
@@ -1194,11 +1194,14 @@ object-fit: contain;
   background-position: top !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  min-height: 450px;
-
+  min-height: 70vh;
+  
   display: flex;
   align-items: center;
   justify-content: center;
+  @include ipad{
+    min-height: auto;
+  }
   &::before {
     @include pos;
     background: $black;
@@ -1215,10 +1218,10 @@ object-fit: contain;
     h2 {
       font-family: "cBold";
       color: $white;
-      font-size: 50px;
+      font-size: 42px;
       text-transform: uppercase;
       @include mobile_md{
-      font-size: 44px;
+      font-size: 40px;
     }
     }
     p {
@@ -1395,7 +1398,7 @@ object-fit: contain;
     
   }
   .flex {
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
      @include mobile{
           flex-direction: column-reverse;
           margin-bottom: 4rem;
@@ -1432,7 +1435,7 @@ object-fit: contain;
       }
       .image {
         position: relative;
-        padding-bottom: 77%;
+        padding-bottom: 55%;
         overflow: hidden;
         @include radius(5px);
         img {
@@ -1460,14 +1463,14 @@ object-fit: contain;
       h2 {
         font-family: "cBold";
         margin-bottom: 20px;
-        font-size: 40px;
+        // font-size: 40px;
             max-width: 324px;
              @include mobile{
               max-width: 500px;
              }
-            @include mobile_md{
-              font-size: 35px;
-            }
+            // @include mobile_md{
+            //   font-size: 35px;
+            // }
       }
       h6 {
         font-family: "cBold";
@@ -1502,7 +1505,7 @@ object-fit: contain;
        }
       h2 {
         font-family: "cBold";
-        font-size: 40px;
+        // font-size: 40px;
         margin-bottom: 12px;
       }
       ul {
@@ -1580,7 +1583,7 @@ width: 40%;
       z-index: 2;
       h2 {
         font-family: "cBold";
-        font-size: 44px;
+        // font-size: 44px;
       }
       ul {
         padding-left: 0;
@@ -1722,7 +1725,7 @@ padding-bottom: 90%;
     }
     .image {
       position: relative;
-      padding-bottom: 80%;
+      padding-bottom: 55%;
       overflow: hidden;
       @include radius(5px);
       @include mobile{
@@ -1873,6 +1876,7 @@ padding-bottom: 90%;
   }
 }
 .gallery {
+  padding-bottom: 0;
   .main_heading {
     max-width: 798px;
     margin-bottom: 6rem;
@@ -1934,7 +1938,7 @@ padding-bottom: 90%;
       margin: 0 -10px;
     }
     .cols {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
       padding: 10px;
       cursor: pointer;
 

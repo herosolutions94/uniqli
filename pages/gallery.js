@@ -218,6 +218,14 @@ const Gallery = () => {
                       </div>
                     </a>
                   </div>
+                  <div className="cols">
+                    <a href="/images/testi-1.jpg">
+                      <div className="image">
+                        <img src="/images/testi-1.jpg" />
+                        <span>Most Loved</span>
+                      </div>
+                    </a>
+                  </div>
                 </LightGallery>
               </div>
             )}
@@ -416,7 +424,7 @@ const Gallery = () => {
             )} */}
           </div>
         </section>
-        <section className="sec_enter sec_last">
+        {/* <section className="sec_enter sec_last">
           <div className="contain">
             <div className="flex">
               <div className="col1">
@@ -451,7 +459,7 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
         <Cta />
       </main>
     </>

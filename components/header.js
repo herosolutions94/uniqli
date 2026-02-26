@@ -61,7 +61,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="contain">
+      <div className="contain-fluid">
         <div className="logo">
           <Link href="/" onClick={closeMenu}>
             <img src="/images/logo.png" alt="" />
