@@ -459,12 +459,11 @@ h4.heading {
   row-gap: 1rem;
   -moz-column-gap: 1rem;
   column-gap: 1rem;
-  height: 4.4rem;
+  height: 4.8rem;
   background: #72243d;
   color: #fff;
   font-family: "oRegular";
   text-align: center;
-  font-size: 1.4rem;
   padding: 0 2.5rem;
   letter-spacing: 0.03rem;
   border-radius: 5px;
@@ -6514,11 +6513,17 @@ header .mobile_icon {
 
 .sec_grids .flex {
   margin: 0 auto;
+  justify-content: center;
 }
 .sec_grids .flex .cols {
-  width: 33.3333333333%;
+  width: 25%;
   padding: 0 25px;
   text-align: center;
+}
+@media (max-width: 1025px) {
+  .sec_grids .flex .cols {
+    width: 33.3333333333%;
+  }
 }
 @media (max-width: 576px) {
   .sec_grids .flex .cols {
@@ -6542,7 +6547,6 @@ header .mobile_icon {
      object-fit: contain;
 }
 .sec_grids .flex .cols .inner p {
-  font-size: 17px;
   margin-bottom: 0;
 }
 
@@ -6883,7 +6887,7 @@ header .mobile_icon {
 }
 .sec_made .image {
   position: relative;
-  padding-bottom: 60%;
+  padding-bottom: 40%;
   overflow: hidden;
   margin-bottom: 20px;
   border-radius: 10px;
