@@ -78,7 +78,7 @@ const Measurements = () => {
             </div>
           </div> */}
           <div className="img">
-            <img src="images/m-2.png" alt="" />
+            <img src="images/m-2-new.webp" alt="" />
           </div>
         </div>
       </section>

@@ -98,7 +98,8 @@ header {
     font-family: "oRegular";
     overflow: hidden;
     @include radius(100px);
-        box-shadow: 0 3px 6px #00000017;
+        // box-shadow: 0 3px 6px #00000017;
+        box-shadow: rgb(110 109 109 / 27%) 0px 3px 6px;
     input {
       width: 100%;
       border: none;
@@ -153,8 +154,8 @@ header {
   }
 }
 .banner {
-  background-image: url(/images/banner_bg.png);
-  background-position: top;
+  background-image: url(/images/banner_bg_new.webp);
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 98vh;
@@ -217,10 +218,14 @@ header {
   .flex {
     // max-width: 1020px;
     margin: 0 auto;
+    justify-content: center;
     .cols {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
       padding: 0 25px;
       text-align: center;
+      @include ipad{
+        width: calc(100% / 3);
+      }
        @include mobile_md{
         width: 100%;
         margin-bottom: 15px;
@@ -241,7 +246,7 @@ object-fit: contain;
           }
         }
         p {
-          font-size: 17px;
+          // font-size: 17px;
           margin-bottom: 0;
         }
       }
@@ -539,6 +544,11 @@ object-fit: contain;
       object-fit: cover;
     }
   }
+  .cta{
+    @include mobile_sm{
+      width: 100%;
+    }
+  }
 }
 .sec_made {
   padding-top: 0;
@@ -549,9 +559,12 @@ object-fit: contain;
     text-align: center;
     margin-bottom: 25px;
   }
+  .item{
+    padding: 0 1rem;
+  }
   .image {
     position: relative;
-    padding-bottom: 40%;
+    padding-bottom: 140%;
     overflow: hidden;
     margin-bottom: 20px;
     @include radius(10px);
@@ -561,7 +574,7 @@ object-fit: contain;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top;
+      object-position: center;
     }
   }
   .slick-arrow {

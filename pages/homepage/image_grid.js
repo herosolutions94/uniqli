@@ -28,7 +28,7 @@ const ImageGrid = () => {
             <div className="cols">
               <div className="inner">
                 <div className="image">
-                  <img src="images/im-2.png" alt="" />
+                  <img src="images/seen.webp" alt="" />
                   <div className="content">
                     <h4>Seen & Snapped</h4>
                     <p>
