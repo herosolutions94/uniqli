@@ -79,7 +79,7 @@ body {
   min-height: 100vh;
   background-color: white;
   color: #000;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "oRegular";
   margin: 0;
   padding: 0;
@@ -97,7 +97,7 @@ body main {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-  padding-top: 11rem;
+  padding-top: 9.7rem;
   overflow: hidden;
 }
 @media (max-width: 475px) {
@@ -182,7 +182,7 @@ button {
 h1,
 .h1,
 .size_1 {
-  font-size: 4.2rem;
+  font-size: 4rem;
 }
 @media (max-width: 991px) {
   h1,
@@ -202,7 +202,7 @@ h1,
 h2,
 .h2,
 .size_2 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
 }
 @media (max-width: 769px) {
   h2,
@@ -215,7 +215,7 @@ h2,
 h3,
 .h3,
 .size_3 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
 }
 @media (max-width: 769px) {
   h3,
@@ -464,7 +464,7 @@ h4.heading {
   color: #fff;
   font-family: "oRegular";
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 0 2.5rem;
   letter-spacing: 0.03rem;
   border-radius: 5px;
@@ -863,7 +863,7 @@ textarea {
 .contain,
 .contain-fluid {
   position: relative;
-  max-width: 1200px;
+  max-width: 100%;
   padding: 0 1.5rem;
   margin: 0 auto;
   min-height: 0.1rem;
@@ -873,12 +873,6 @@ textarea {
 .contain-fluid:after {
   content: "";
   display: table;
-}
-@media (min-width: 1760px) {
-  .contain,
-  .contain-fluid {
-    max-width: 1750px;
-  }
 }
 .contain:after, .contain:after,
 .contain-fluid:after,
@@ -2952,7 +2946,7 @@ header .nav_sub_blk .txt p {
 }
 
 .top_nav {
-  background: #d7cfc2;
+  background: #000;
   text-align: center;
   padding: 4px 0;
   transition: all 0.3s ease;
@@ -2963,8 +2957,8 @@ header .nav_sub_blk .txt p {
 .top_nav p {
   margin-bottom: 0;
   font-family: "oregular";
-  color: #000;
-  font-size: 13px;
+  color: #fff;
+  font-size: 12px;
 }
 .top_nav.hide {
   opacity: 0;
@@ -2993,7 +2987,7 @@ header .nav_sub_blk .txt p {
   background: #d4d4d4;
 }
 .bTn .col a img {
-  width: 28px;
+  width: 23px;
   display: block;
 }
 
@@ -3033,7 +3027,7 @@ header .nav_sub_blk .txt p {
 header .logo {
   float: left;
   max-width: 14rem;
-  height: 8.5rem;
+  height: 6.5rem;
   transition: all ease 0.5s;
 }
 @media (max-width: 991px) {
@@ -3098,14 +3092,11 @@ nav {
   align-items: center;
   justify-content: flex-end;
   -webkit-box-orient: vertical;
-  height: 8.5rem;
-  width: -moz-max-content;
-  width: max-content;
+  height: 6.5rem;
   position: absolute;
   right: 15px;
-  left: 0;
+  left: 18%;
   margin-left: auto;
-  gap: 100px;
 }
 @media (max-width: 1025px) {
   nav {
@@ -3206,7 +3197,7 @@ header.logged nav {
 #nav > ul {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   -webkit-box-orient: vertical;
   list-style: none;
   padding: 0;
@@ -3246,9 +3237,8 @@ header.logged nav {
   -webkit-box-orient: vertical;
   display: inline-flex;
   height: 4rem;
-  font-family: "oMedium";
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -6457,9 +6447,20 @@ header .mobile_icon {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 17rem;
+  height: 98vh;
   margin-top: 31px;
   padding-bottom: 4rem;
+}
+@media (max-width: 1025px) {
+  .banner {
+    height: 100%;
+  }
+}
+.banner .contain {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  max-width: 100%;
 }
 .banner::before {
   position: absolute;
@@ -6474,7 +6475,7 @@ header .mobile_icon {
 }
 .banner .content {
   padding-top: 110px;
-  max-width: 567px;
+  max-width: 100%;
 }
 .banner .content h1 {
   font-family: "cBold";
@@ -6551,7 +6552,6 @@ header .mobile_icon {
   align-items: center;
   gap: 7px;
   justify-content: center;
-  font-size: 42px;
 }
 @media (max-width: 576px) {
   .main_heading h2 {
@@ -6622,7 +6622,7 @@ header .mobile_icon {
 }
 .image_grids .flex .cols .inner .image {
   position: relative;
-  padding-bottom: 141%;
+  padding-bottom: 125%;
   overflow: hidden;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -6730,7 +6730,6 @@ header .mobile_icon {
   font-size: 18px;
 }
 .work_grids .flex .cols .inner .content p {
-  font-size: 15px;
   margin-bottom: 0;
 }
 
@@ -6749,6 +6748,7 @@ header .mobile_icon {
 .sec_cta .col1 {
   width: 78%;
   padding-right: 185px;
+  align-self: center;
 }
 @media (max-width: 1025px) {
   .sec_cta .col1 {
@@ -6941,7 +6941,6 @@ header .mobile_icon {
   max-width: 780px;
   text-align: center;
   padding: 4rem 13rem;
-  background: rgba(215, 207, 194, 0.33);
   margin: 0 auto;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -7631,10 +7630,15 @@ header .mobile_icon {
   background-position: top !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  min-height: 450px;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 1025px) {
+  .sub_banner {
+    min-height: auto;
+  }
 }
 .sub_banner::before {
   position: absolute;
@@ -7656,12 +7660,12 @@ header .mobile_icon {
 .sub_banner .inner h2 {
   font-family: "cBold";
   color: #fff;
-  font-size: 50px;
+  font-size: 42px;
   text-transform: uppercase;
 }
 @media (max-width: 576px) {
   .sub_banner .inner h2 {
-    font-size: 44px;
+    font-size: 40px;
   }
 }
 .sub_banner .inner p {
@@ -7785,7 +7789,11 @@ header .mobile_icon {
   }
 }
 .about.sec_vision {
-  background: #d7cfc2;
+  background: #000000;
+  color: #fff;
+}
+.about.sec_vision * {
+  color: #fff;
 }
 .about.sec_vision .flex {
   flex-direction: row-reverse;
@@ -7847,7 +7855,7 @@ header .mobile_icon {
   font-size: 19px;
 }
 .how_work .flex {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
 }
 @media (max-width: 769px) {
   .how_work .flex {
@@ -7892,7 +7900,7 @@ header .mobile_icon {
 }
 .how_work .flex .col1 .image {
   position: relative;
-  padding-bottom: 77%;
+  padding-bottom: 55%;
   overflow: hidden;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -7933,17 +7941,11 @@ header .mobile_icon {
 .how_work .flex .col2 h2 {
   font-family: "cBold";
   margin-bottom: 20px;
-  font-size: 40px;
   max-width: 324px;
 }
 @media (max-width: 769px) {
   .how_work .flex .col2 h2 {
     max-width: 500px;
-  }
-}
-@media (max-width: 576px) {
-  .how_work .flex .col2 h2 {
-    font-size: 35px;
   }
 }
 .how_work .flex .col2 h6 {
@@ -7988,7 +7990,6 @@ header .mobile_icon {
 }
 .two_grids .cols .inner h2 {
   font-family: "cBold";
-  font-size: 40px;
   margin-bottom: 12px;
 }
 .two_grids .cols .inner ul {
@@ -8076,7 +8077,6 @@ header .mobile_icon {
 }
 .sec_start .col1 .inner h2 {
   font-family: "cBold";
-  font-size: 44px;
 }
 .sec_start .col1 .inner ul {
   padding-left: 0;
@@ -8184,7 +8184,7 @@ header .mobile_icon {
 }
 .sec_how .flex .col1 ul li {
   width: 100%;
-  padding: 8px;
+  padding: 3px 8px;
   margin-bottom: 8px;
   border: 1px solid rgba(114, 36, 61, 0.3294117647);
   list-style: none;
@@ -8245,7 +8245,7 @@ header .mobile_icon {
 }
 .sec_enter .col1 .image {
   position: relative;
-  padding-bottom: 80%;
+  padding-bottom: 55%;
   overflow: hidden;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -8417,6 +8417,9 @@ header .mobile_icon {
   margin-bottom: 30px;
 }
 
+.gallery {
+  padding-bottom: 0;
+}
 .gallery .main_heading {
   max-width: 798px;
   margin-bottom: 6rem;
@@ -8484,7 +8487,7 @@ header .mobile_icon {
   margin: 0 -10px;
 }
 .gallery .grid .cols {
-  width: 33.3333333333%;
+  width: 25%;
   padding: 10px;
   cursor: pointer;
   transition: all ease 0.5s;
@@ -8499,7 +8502,7 @@ header .mobile_icon {
 }
 .gallery .grid .cols .image {
   position: relative;
-  padding-bottom: 100%;
+  padding-bottom: 130%;
   overflow: hidden;
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -8535,6 +8538,21 @@ header .mobile_icon {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+.gallery .grid .cols .image span {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  color: #333;
+  font-size: 1.4rem;
+  font-family: "Bold";
 }
 
 .terms {
