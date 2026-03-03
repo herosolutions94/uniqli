@@ -1278,7 +1278,7 @@ object-fit: contain;
     }
     .image {
       position: relative;
-      padding-bottom: 105%;
+      padding-bottom: 90%;
       overflow: hidden;
       @include radius(5px);
        @include mobile{
@@ -1359,11 +1359,17 @@ object-fit: contain;
     }
   }
   &.sec_vision {
-    background: #000000;
-    color: #fff;
-    * {
-      color: #fff;
+    background: #d7cfc2;
+    padding: 14rem 0;
+    @include mobile{
+      padding: 5rem 0;
     }
+    .cta{
+      @include mobile_sm{
+        width: 100%!important;
+      }
+    }
+    
     .flex {
       flex-direction: row-reverse;
       .col1 {
@@ -1700,15 +1706,15 @@ padding-bottom: 90%;
         padding-left: 0;
         li {
           width: 100%;
-          padding:3px 8px;
+          padding:8px;
           margin-bottom: 8px;
-          border: 1px solid #72243d54;
+          border: 1px solid #00000054;
           list-style: none;
           display: flex;
           align-items: center;
           @include radius(3px);
           &.head {
-            background: $primary-color;
+            background: $black;
             color: $white;
           }
           &:last-child {
