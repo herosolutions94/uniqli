@@ -32,7 +32,7 @@ body {
   main {
     @include flex($flow: column);
     min-height: 100vh;
-    padding-top: 11rem;
+    padding-top: 9.7rem;
     overflow: hidden;
     @include mobile_sm {
       min-height: auto;
@@ -703,7 +703,7 @@ textarea {
 .contain,
 .contain-fluid {
   position: relative;
-  max-width: 1200px;
+  max-width: 100%;
   padding: 0 1.5rem;
   margin: 0 auto;
   min-height: 0.1rem;
@@ -712,9 +712,9 @@ textarea {
     content: "";
     display: table;
   }
-  @include lcd{
-    max-width: 1750px;
-  }
+  // @include lcd{
+  //   max-width: 1750px;
+  // }
   &:after,
   &:after {
     clear: both;
@@ -2772,7 +2772,7 @@ header {
 }
 
 .top_nav {
-  background: #d7cfc2;
+  background: $black;
   text-align: center;
   padding: 4px 0;
   transition: all 0.3s ease;
@@ -2783,8 +2783,8 @@ header {
   p {
     margin-bottom: 0;
     font-family: "oregular";
-    color: $black;
-    font-size: 13px;
+    color: $white;
+    font-size: 12px;
   }
 
   &.hide {
@@ -2815,7 +2815,7 @@ header {
     }
     a {
       img {
-            width: 28px;
+            width: 23px;
     display: block;
       }
     }
@@ -2847,7 +2847,7 @@ header {
   header & {
     float: left;
     max-width: 14rem;
-    height: 8.5rem;
+    height: 6.5rem;
     @include trans;
    
     @include ipad_sm {
@@ -2905,9 +2905,9 @@ header {
 
 nav {
   @include flex(center, flex-end);
-  height: 8.5rem;
+  height: 6.5rem;
   // width: max-content;
-  @include pos($t: null, $b: null, $r: 15px, $l:20%);
+  @include pos($t: null, $b: null, $r: 15px, $l:18%);
   margin-left: auto;
   // gap: 100px;
   @include ipad {
@@ -3020,9 +3020,9 @@ nav {
         display: -ms-inline-flexbox;
         display: inline-flex;
         height: 4rem;
-        font-family: "oMedium";
+        // font-family: "oMedium";
         color: $black;
-        font-size: 1.4rem;
+        font-size: 1.35rem;
         text-align: center;
         text-transform: uppercase;
         text-decoration: none;

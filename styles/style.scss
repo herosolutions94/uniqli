@@ -157,10 +157,18 @@ header {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 17rem;
+  height: 98vh;
   margin-top: 31px;
   padding-bottom: 4rem;
-
+  @include ipad{
+    height: 100%;
+  }
+  .contain{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    max-width: 100%;
+  }
   &::before {
     @include pos;
     background: #00000054;
@@ -170,7 +178,7 @@ header {
   }
   .content {
     padding-top: 110px;
-    max-width: 567px;
+    max-width: 100%;
 
     h1 {
       font-family: "cBold";
@@ -313,7 +321,7 @@ object-fit: contain;
         }
         .image {
           position: relative;
-          padding-bottom: 141%;
+          padding-bottom: 125%;
           overflow: hidden;
           @include radius(10px);
           img {
@@ -424,6 +432,7 @@ object-fit: contain;
   .col1 {
     width: 78%;
     padding-right: 185px;
+    align-self: center;
     @include ipad{         
     padding-right: 75px;
     }
@@ -1334,7 +1343,11 @@ object-fit: contain;
     }
   }
   &.sec_vision {
-    background: #d7cfc2;
+    background: #000000;
+    color: #fff;
+    * {
+      color: #fff;
+    }
     .flex {
       flex-direction: row-reverse;
       .col1 {
@@ -1671,7 +1684,7 @@ padding-bottom: 90%;
         padding-left: 0;
         li {
           width: 100%;
-          padding: 8px;
+          padding:3px 8px;
           margin-bottom: 8px;
           border: 1px solid #72243d54;
           list-style: none;
