@@ -1256,8 +1256,11 @@ object-fit: contain;
   }
 }
 .about {
+  .contain{
+    max-width: 150rem;
+  }
   .col1 {
-    width: 59%;
+    width: 50%;
     align-self: center;
         padding-right: 20px;
     @include mobile{
@@ -1271,7 +1274,7 @@ object-fit: contain;
     }
   }
   .col2 {
-    width: 41%;
+    width: 50%;
     align-self: center;
     @include mobile{
       width: 100%;
@@ -1295,8 +1298,11 @@ object-fit: contain;
   }
   &.sec_perfect {
     margin-bottom: 8rem;
-    padding: 5rem 0;
+    padding: 14rem 0;
     background: #461a02;
+    @include mobile{
+      padding: 5rem 0;
+    }
     .flex {
       flex-direction: row-reverse;
       .col1 {
